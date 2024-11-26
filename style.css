@@ -1,0 +1,166 @@
+html {
+    
+    scroll-behavior: smooth;
+    font-family: Inter, sans-serif;
+}
+
+body    {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    
+}
+img{
+    width: 100% ;
+    height: auto ;
+}
+
+header  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.header__logo     {
+    cursor: pointer;
+}
+
+
+.nav__link {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: rgba(24, 25, 31, 1);
+    text-decoration: none;
+}
+
+.nav__link:hover    {
+    color: aqua;
+    transition: background-color 0.3s ease;
+}
+
+.nav__link a {
+    transition: all 0.3s ease 0s;
+}
+
+.header__button-login {
+    cursor: pointer;
+    padding: 9px 25px;
+    color: rgba(76, 175, 79, 1);
+    border: 0;
+    border-radius: 6px;
+}
+
+.header__button-login:hover    {
+    background-color: rgba(76, 175, 79, 1) ;
+    color: rgba(255, 255, 255, 1);
+    transition: background-color 0.3s ease;
+}
+
+.header__button-signup  {
+    cursor: pointer;
+    padding: 9px 25px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(76, 175, 79, 1);
+    border: 0;
+    border-radius: 6px;
+}
+
+.header__button-signup:hover    {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(76, 175, 79, 1);
+    transition: background-color 0.3s ease;
+}
+
+.slider  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 100px;
+    height: 600px;
+}
+
+.title    {
+    font-size: 4rem;
+    color: rgba(77, 77, 77, 1);
+}
+
+.green {
+    color: rgba(76, 175, 79, 1);
+}
+
+.slider__illustration   {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 400px;
+}
+
+.subtitle {
+    margin-top: 16px;
+    color: rgba(113, 113, 113, 1);
+    font-size: 1rem;
+}
+
+.btn    {
+    display: inline-block;
+    cursor: pointer;
+    padding: 14px 32px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(76, 175, 79, 1);
+    border: 0;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.slider__button {
+    margin-top: 32px;
+    
+}
+
+.slider__button:hover  {
+    background-color:  rgba(255, 255, 255, 1);
+    color: rgba(76, 175, 79, 1);
+    transition: background-color 0.3s ease;
+}
+
+.clients    {
+    height: 190px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.clients__title    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title__content {
+    font-size: 36px;
+    color: rgba(77, 77, 77, 1);
+}
+
+.subtitle__content  {
+    margin-top: 8px;
+    font-size: 16px;
+    color: rgba(113, 113, 113, 1);
+}
+
+.clients__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 41px auto 0 auto;
+    padding: 0 10px;
+    gap: 100px;
+}
+
+.clients__icons img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
