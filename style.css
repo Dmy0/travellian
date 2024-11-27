@@ -136,14 +136,14 @@ header  {
     text-align: center;
 }
 
-.clients__title-content {
+.clients__title {
     font-size: 36px;
     color: rgba(77, 77, 77, 1);
     margin: 0;
     text-align: center;
 }
 
-.clients__subtitle-content  {
+.clients__subtitle  {
     margin-top: 8px;
     font-size: 16px;
     color: rgba(113, 113, 113, 1);
@@ -204,8 +204,7 @@ header  {
     line-height: 20px;
     font-weight: 400;
     max-width: 250px;
-    height: 60px;
-    margin: 8px;
+    margin: 8px 0 0 0;
     text-align: center;
 }
 
