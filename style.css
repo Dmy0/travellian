@@ -37,7 +37,7 @@ header  {
 }
 
 .nav__link:hover    {
-    color: aqua;
+    color: rgb(76, 175, 79, 1);
     transition: background-color 0.3s ease;
 }
 
@@ -117,7 +117,6 @@ header  {
 
 .slider__button {
     margin-top: 32px;
-    
 }
 
 .slider__button:hover  {
@@ -137,11 +136,14 @@ header  {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .title__content {
     font-size: 36px;
     color: rgba(77, 77, 77, 1);
+    margin: 0;
+    text-align: center;
 }
 
 .subtitle__content  {
@@ -163,4 +165,152 @@ header  {
     width: 48px;
     height: 48px;
     object-fit: contain;
+}
+
+.wrap   {
+    width: 100%;
+    height: 120px;
+    margin-top: 40px;
+}
+
+.wrap__title    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap__container    {
+    margin-top: 16px;
+}
+
+.wrap-content   {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 144px;
+    gap: 8px;
+}
+
+.wrap-content img   {
+    height: 56px;
+    width: 65px;
+}
+
+.wrap-block1    {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap-block1 h2 {
+    color: rgba(77, 77, 77, 1);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.wrap-block1 h3 {
+    color: rgba(113, 113, 113, 1);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    max-width: 250px;
+    height: 60px;
+    margin: 8px;
+    text-align: center;
+}
+
+
+.wrap-block2    {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap-block2 h2 {
+    color: rgba(77, 77, 77, 1);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.wrap-block2 h3 {
+    color: rgba(113, 113, 113, 1);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    max-width: 250px;
+    height: 60px;
+    margin: 8px;
+    text-align: center;
+}
+
+.wrap-block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap-block3 h2 {
+    color: rgba(77, 77, 77, 1);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.wrap-block3 h3 {
+    color: rgba(113, 113, 113, 1);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    max-width: 250px;
+    height: 60px;
+    margin: 8px;
+    text-align: center;
+}
+
+.instruction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    margin-top: 42px;
+    height: 433px;
+    width: 100%;
+}
+
+.instruction__right h2  {
+    color: rgba(77, 77, 77, 1);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.instruction__right h3 {
+    max-width: 650px;
+    color: rgba(113, 113, 113, 1);
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.instuction__button     {
+    margin-top: 32px;
+}
+
+.instuction__button:hover  {
+    background-color:  rgba(255, 255, 255, 1);
+    color: rgba(76, 175, 79, 1);
+    transition: background-color 0.3s ease;
 }
