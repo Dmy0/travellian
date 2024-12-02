@@ -276,6 +276,10 @@ header {
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  gap: inherit;
 }
 
 .statistic {
@@ -647,7 +651,7 @@ header {
   position: relative;
 }
 
-button {
+.footer__right-input-btn {
   margin: 0;
   padding: 0;
   border: none;
