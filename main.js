@@ -1,23 +1,6 @@
-// let footer = document.querySelector(".footer")
-
-// let input2 = footer.querySelector(".footer__right-item-input input")
-
-// let footerRight = document.querySelectorAll(".footer__right-function")
-
-// let input = document.querySelector(".footer__right-item-input input")
-// let textBlock = document.querySelector(".footer__right-function-title")
-
-// console.log(footerRight[1])
-
-// input.addEventListener("input", function (e){
-//        textBlock.textContent = input.value
-// })
-
-// 2 classa -overlay(opacity 1 transition to opacity 0.4) -hide(display none) class list na body method style body.style.overflow = "hidden" "visable"
-
 const popupOpenLog = document.querySelector(".header__button-login"),
   popupLog = document.querySelector(".login"),
-  popup = document.querySelector(".popup__close"),
+  popupClose = document.querySelector(".popup__close"),
   overlay = document.querySelector(".popups");
 
 function toggleClass(btn, overlay, popup, hide, opacity) {
@@ -27,25 +10,28 @@ function toggleClass(btn, overlay, popup, hide, opacity) {
     console.log(event.target);
   });
 }
-toggleClass(popupOpenLog, popup, popupLog, "hide", "opacity");
-toggleClass(popup, popup, popupLog, "hide", "opacity");
+toggleClass(popupOpenLog, overlay, popupLog, "hide", "opacity");
+toggleClass(popupClose, overlay, popupLog, "hide", "opacity");
 
-// function documentClosePopup(popup, hide, opacity, overlay) {
-//   document.addEventListener("click", function (e) {
-//     if (!popup.contains(e.target)) {
-//       popup.classList.remove(hide);
-//       overlay.classList.add(opacity);
-//     }
-//   });
-// }
-
-function documentClosePopup(popup, hide, opacity, overlay) {
+function documentClosePopup(popup, overlay, hide, opacity, btn) {
   document.addEventListener("click", function (e) {
-    if (!popup.contains(e.target)) {
-      // Проверяем, находится ли клик вне popup
-      popup.classList.add(hide); // Скрываем popup
-      overlay.classList.remove(opacity); // Убираем затемнение
+    if (e.target.contains(popup) && e.target !== btn) {
+      popup.classList.add(hide);
+      overlay.classList.remove(opacity);
     }
   });
 }
-// documentClosePopup(popup, overlay, "hide", "opacity");
+documentClosePopup(popupLog, overlay, "hide", "opacity", popupOpenLog);
+
+const burger = document.querySelector(".header__burger"),
+  burgerMenu = document.querySelector(".header__wrap");
+
+function showBurger(btn, menu) {
+  burger.addEventListener("click", function () {
+    btn.classList.toggle("active");
+    menu.classList.toggle("active");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+showBurger(burger, burgerMenu, "active");
