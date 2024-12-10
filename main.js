@@ -1,6 +1,6 @@
 const popupOpenLog = document.querySelector(".header__button-login"),
   popupLog = document.querySelector(".login"),
-  popupClose = document.querySelector(".log__close"),
+  popupClose = document.querySelector(".login__close"),
   overlay = document.querySelector(".overlay"),
   popupOpenReg = document.querySelector(".slider__button");
 
