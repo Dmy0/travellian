@@ -1,7 +1,7 @@
 @media screen and (max-width: 1050px) and (orientation: portrait) {
   .header__burger {
     display: block;
-    z-index: 11;
+    z-index: 13;
   }
 
   .header__wrap {
@@ -24,24 +24,48 @@
   .header__logo {
     position: absolute;
     top: 35px;
-    left: 100px;
+    left: 50px;
     cursor: pointer;
+    max-width: 500px;
   }
 
   .nav {
     display: flex;
     margin: 0;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 30px;
   }
 
   .nav__link {
     font-size: 40px;
+    position: relative;
+  }
+
+  .nav__link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.7s;
+    transform: scale(0, 1);
+  }
+
+  .nav__link:hover:after {
+    opacity: 1;
+    transform: scale(1);
   }
 
   .header__button-login {
+    position: fixed;
+    bottom: 10px;
+    left: 100px;
     cursor: pointer;
     padding: 18px 50px;
     background-color: rgba(245, 247, 250, 1);
@@ -59,6 +83,9 @@
 
   .header__button-signup {
     cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 100px;
     padding: 18px 50px;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(76, 175, 79, 1);

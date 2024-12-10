@@ -17,10 +17,10 @@
   </head>
   <body>
     <header class="header">
+      <div class="header__logo">
+        <img src="img/logo.png" alt="Logo" />
+      </div>
       <div class="header__wrap ">
-        <div class="header__logo">
-          <img src="img/logo.png" alt="Logo" />
-        </div>
       <nav class="nav">
         <a href="#" class="nav__link">Home</a>
         <a href="#" class="nav__link">Service</a>
@@ -447,23 +447,45 @@
         </div>
       </div>
     </footer>
-    <div class="popups">
-      <form method="POST" class="popup__body login hide">
-        <div class="popup__form">
-          <a class="popup__close">
+    <div class="log-popup">
+      <form method="POST" class="log-popup__body login hide">
+        <div class="log-popup__form">
+          <a class="log-popup__close">
             <img src="img/btns/carbon_close-outline.png" alt="close">
           </a>
-          <div class="popup__form-title">Complete the form</div>
-          <div class="popup__inputs">
-             
-            <input class="loginInput" type="text" placeholder="Login" required/>
+          <div class="log-popup__form-title">Complete the form</div>
+          <div class="log-popups__inputs-container">
+            <div class="log-popup__inputs">
+                <label for="email">E-mail</label>
+                <input class="loginInput" type="email" placeholder="Your email adress" required/>
+                <span class="log-popup__input-usericon"><img src="img/input-icons/user-icon.png" alt="user-icon"></span>
+            </div>
+            <div class="log-popup__inputs">
+              <label for="password">Password</label>
               <input class="passwordInput" type="password" placeholder="Password" required>
-              <div class="popup__log">
-                  <button type="submit" class="popup__button-login buttons">Login</button>
-               <input type="checkbox" name="accepted" value="yes" required> <span class="checkbox-info">apply private data transfer</span>
+              <span class="log-popup__input-eyeicon"><img src="img/input-icons/eye-icon.png" alt="eye-icon"></span>
             </div>
+            
+
+            <div class="log-popup__inputs-checkbox">
+              <label>
+                <input type="checkbox" name="accepted" value="yes"> <span class="checkbox-info">Remember me</span>
+              </label>
             </div>
-            <h2 class="popup__form-sign">Still don't have an account?</h2>
+            <div class="log-popup__log">
+              <button type="submit" class="log-popup__button-login buttons">Login</button>
+            </div>
+            <div class="log-popup__inputs-understripe">
+              <span class="stripe"></span>
+              <h2 class="log-popup__form-sign">Forget password?</h2>
+              <div class="log-popup__inputs-understripe-googlebtn">
+                <div class="log-popup__inputs-googlebtn-button">
+                  <img src="img/input-icons/google-icon.png" alt="google">
+                </div>
+                  Continue With Google
+              </div>
+            </div>
+          </div>
         </div>  
       </form>
     </div>
