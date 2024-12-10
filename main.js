@@ -1,7 +1,7 @@
 const popupOpenLog = document.querySelector(".header__button-login"),
   popupLog = document.querySelector(".login"),
-  popupClose = document.querySelector(".log-popup__close"),
-  overlay = document.querySelector(".log-popup"),
+  popupClose = document.querySelector(".log__close"),
+  overlay = document.querySelector(".overlay"),
   popupOpenReg = document.querySelector(".slider__button");
 
 function toggleClass(btn, overlay, popup, hide, opacity) {
