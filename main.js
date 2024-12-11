@@ -5,7 +5,7 @@ const popupOpenLog = document.querySelector(".header__button-login"),
   popupOpenReg = document.querySelector(".slider__button");
 popupRegClose = document.querySelector(".sign__close");
 popupOpenSign = document.querySelector(".header__button-signup");
-popupSugnClose = document.querySelector(".sign__close");
+popupSignClose = document.querySelector(".sign__close");
 popupSign = document.querySelector(".sign");
 
 // log
