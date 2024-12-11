@@ -60,7 +60,7 @@ function documentClosePopup(popup, overlay, hide, opacity, btn) {
     }
   });
 }
-documentClosePopup(popupLog, overlay, "hide", "opacity", popupOpenLog);
+documentClosePopup(popupSign, overlay, "hide", "opacity", popupOpenReg);
 
 // sign
 function toggleClass(btn, overlay, popup, hide, opacity) {
@@ -81,4 +81,4 @@ function documentClosePopup(popup, overlay, hide, opacity, btn) {
     }
   });
 }
-documentClosePopup(popupSign, overlay, "hide", "opacity", popupOpenLog);
+documentClosePopup(popupSign, overlay, "hide", "opacity", popupOpenReg);
