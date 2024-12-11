@@ -817,20 +817,11 @@ input::placeholder {
   display: block;
   position: absolute;
   top: 0%;
-  left: 10%;
+  left: 5%;
   transform: translateY(-50%);
   font-size: 10px;
   color: #aaa;
   pointer-events: none;
-}
-
-.login__inputs-item input {
-  width: 100%;
-  border: 1px solid #f8f1ff;
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #403a4b;
 }
 
 .login__inputs {
@@ -843,7 +834,7 @@ input::placeholder {
   border: none;
   max-width: 10px;
   position: absolute;
-  right: 10%;
+  right: 5%;
   bottom: 10%;
   transform: translateY(-50%);
 }
@@ -854,20 +845,21 @@ input::placeholder {
   border: none;
   max-width: 12px;
   position: absolute;
-  right: 10%;
+  right: 5%;
   bottom: 25%;
   transform: translateY(-50%);
 }
 
 .loginInput,
-.passwordInput {
+.passwordInput,
+.usernameInput {
   display: block;
   background-color: rgba(245, 247, 250, 1);
   color: rgba(0, 0, 0, 0.5);
+  font-size: 10px;
   padding: 10px;
   border: 0;
   border-radius: 8px;
-  max-width: 215px;
   width: 100%;
 }
 
@@ -920,7 +912,7 @@ input::placeholder {
   top: 20px;
 }
 
-.stripe {
+.login__stripe {
   display: flex;
   margin-top: 60px;
   border: 0.01px solid rgba(108, 91, 91, 0.6);
@@ -935,8 +927,8 @@ input::placeholder {
   align-items: center;
 }
 
-.login__inputs-item-googlebtn {
-  margin-top: 20px;
+.button__google {
+  margin-top: 9px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -952,7 +944,95 @@ input::placeholder {
   padding: auto 60px;
 }
 
-.login__googlebtn {
-  align-items: flex-end;
+.button__google img {
   max-width: 20px;
+}
+
+.sign {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 115px;
+}
+
+.sign__form {
+  background-color: rgba(217, 217, 217, 1);
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+  border: 0;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.sign__form-title {
+  color: rgba(77, 77, 77, 1);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.sign__close {
+  cursor: pointer;
+  max-width: 16px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.sign__inputs-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.sign__inputs-item label {
+  font-size: 14px;
+  color: rgb(31, 30, 33, 1);
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: #aaa;
+  pointer-events: none;
+}
+
+.sign__inputs-item input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 10px;
+}
+
+.sign__form-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.sign__form-signBotton {
+  cursor: pointer;
+  padding: 9px 25px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(76, 175, 79, 1);
+  border: 0;
+  border-radius: 6px;
+  width: 70%;
+}
+
+.sign__stripe {
+  display: flex;
+  border: 0.01px solid rgba(108, 91, 91, 0.6);
+  width: 70%;
+  height: 0px;
 }

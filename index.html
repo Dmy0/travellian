@@ -474,18 +474,48 @@
               <button type="submit" class="login__logButton buttons">Login</button>
             </div>
             <div class="login__inputs-bottom">
-              <span class="stripe"></span>
+              <span class="login__stripe"></span>
               <h2 class="login__form-sign">Forget password?</h2>
-            <div class="login__inputs-item-googlebtn">
-              <div class="login__googlebtn">
+            <div class="button__google">             
                 <img src="img/input-icons/google-icon.png" alt="google">
-              </div>
               Continue With Google
             </div>
               
             </div>
           </div>
         </div>  
+      </form>
+      <form method="POST" class="sign hide">
+        <div class="sign__form">
+          <div class="sign__close">
+            <img src="img/btns/carbon_close-outline.png" alt="close-button">
+          </div>
+          <div class="sign__form-title">Create An Account</div>
+          <div class="sign__inputs">
+            <div class="sign__inputs-item">
+              <label for="username">Username</label>
+              <input class="usernameInput" type="text" placeholder="Enter your username">
+            </div>
+            <div class="sign__inputs-item">
+              <label for="email">E-mail</label>
+                <input class="loginInput" type="email" placeholder="Your email adress" required/>
+            </div>
+            <div class="sign__inputs-item">
+              <label for="password">Password</label>
+              <input class="passwordInput" type="password" placeholder="Password" required>
+            </div>
+            <div class="sign__inputs-item">
+              <label for="password">Confirm password</label>
+              <input class="passwordInput" type="password" placeholder="Confirm password" required>
+            </div>
+            <div class="sign__form-bottom">
+              <button class="sign__form-signBotton">Sign-up</button>
+              <span class="sign__stripe"></span>
+            <div class="button__google">
+                <img src="img/input-icons/google-icon.png" alt="google">
+              Continue With Google
+            </div>
+          </div>
       </form>
     </div>
   </body>
