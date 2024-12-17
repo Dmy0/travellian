@@ -156,7 +156,7 @@ header {
 }
 
 .slider__content-title {
-  font-size: 4rem;
+  font-size: 60px;
   color: rgba(77, 77, 77, 1);
 }
 
@@ -556,15 +556,13 @@ header {
 }
 
 .advantages__bottom-item-wrap {
-  position: absolute;
-  bottom: -130px;
-  left: 35px;
+  position: relative;
   background-color: rgba(245, 247, 250, 1);
-  max-width: 317px;
   text-align: center;
   max-width: 285px;
   border-radius: 8px;
   padding: 16px;
+  margin: -130px auto 0 auto;
 }
 
 .advantages__bottom-wrap-title {
@@ -673,8 +671,9 @@ header {
   gap: 16px;
 }
 
-.footer__left-socialnetwork-item {
-  max-width: 32px;
+.footer__left-socialnetwork-item img {
+  width: 40px;
+  height: 40px;
 }
 
 .footer__right-function {
@@ -812,14 +811,13 @@ input::placeholder {
 }
 
 .login__inputs-item label {
-  font-size: 14px;
   color: rgba(64, 58, 75, 1);
   display: block;
   position: absolute;
   top: 0%;
   left: 5%;
   transform: translateY(-50%);
-  font-size: 10px;
+  font-size: 12px;
   color: #aaa;
   pointer-events: none;
 }
@@ -829,25 +827,46 @@ input::placeholder {
 }
 
 .login__input-usericon {
-  margin: 0;
-  padding: 0;
-  border: none;
-  max-width: 10px;
   position: absolute;
-  right: 5%;
-  bottom: 10%;
+  top: 50%;
+  right: 12px;
   transform: translateY(-50%);
+  width: 12px;
+  height: 15px;
+  z-index: 2;
+}
+
+.login__input-usericon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/input-icons/user-icon.png") no-repeat center center;
+  background-size: contain;
+  padding-right: 10px;
 }
 
 .login__input-eyeicon {
-  margin: 0;
-  padding: 0;
-  border: none;
-  max-width: 12px;
   position: absolute;
-  right: 5%;
-  bottom: 25%;
+  top: 50%;
+  right: 12px;
   transform: translateY(-50%);
+  width: 12px;
+  height: 15px;
+  z-index: 2;
+}
+
+.login__input-eyeicon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/input-icons/eye-icon.png") no-repeat center center;
+  background-size: contain;
 }
 
 .loginInput,
@@ -856,8 +875,8 @@ input::placeholder {
   display: block;
   background-color: rgba(245, 247, 250, 1);
   color: rgba(0, 0, 0, 0.5);
-  font-size: 10px;
-  padding: 10px;
+  font-size: 14px;
+  padding: 15px;
   border: 0;
   border-radius: 8px;
   width: 100%;
@@ -869,7 +888,7 @@ input::placeholder {
 
 .login__logButton {
   cursor: pointer;
-  padding: 9px 25px;
+  padding: 12px 25px;
   background-color: rgba(76, 175, 79, 1);
   color: rgb(220, 221, 223);
   border: 0;
@@ -912,12 +931,13 @@ input::placeholder {
   top: 20px;
 }
 
-.login__stripe {
-  display: flex;
-  margin-top: 60px;
-  border: 0.01px solid rgba(108, 91, 91, 0.6);
-  width: 70%;
-  height: 0px;
+.login__form-sign::before {
+  content: "";
+  display: block;
+  background-color: grey;
+  width: 175px;
+  height: 1px;
+  margin-bottom: 10px;
 }
 
 .login__inputs-bottom {
@@ -925,27 +945,7 @@ input::placeholder {
   flex-direction: column;
   gap: 9px;
   align-items: center;
-}
-
-.button__google {
-  margin-top: 9px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px;
-  border: 0.5px solid rgba(76, 175, 79, 1);
-  border-radius: 7px;
-  padding: 10px;
-  font-size: 12px;
-  font-weight: 500;
-  width: 70%;
-  text-align: center;
-  padding: auto 60px;
-}
-
-.button__google img {
-  max-width: 20px;
+  padding-top: 30px;
 }
 
 .sign {
@@ -954,6 +954,27 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   padding: 20px 115px;
+}
+
+.login__form-button-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 50px;
+  border: 1px solid rgba(76, 175, 79, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login__form-button-google::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  background: url("img/input-icons/google-icon.png") no-repeat center center;
+  background-size: contain;
 }
 
 .sign__form {
@@ -1022,17 +1043,39 @@ input::placeholder {
 
 .sign__form-signBotton {
   cursor: pointer;
-  padding: 9px 25px;
+  padding: 9px 30px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(76, 175, 79, 1);
   border: 0;
   border-radius: 6px;
-  width: 70%;
+  width: 80%;
 }
 
 .sign__stripe {
   display: flex;
   border: 0.01px solid rgba(108, 91, 91, 0.6);
-  width: 70%;
+  width: 80%;
   height: 0px;
+}
+
+.sign__form-button-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  gap: 10px;
+  padding: 10px 40px;
+  border: 1px solid rgba(76, 175, 79, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sign__form-button-google::before {
+  content: "";
+  position: absolute;
+  left: 18%;
+  width: 20px;
+  height: 20px;
+  background: url("img/input-icons/google-icon.png") no-repeat center center;
+  background-size: contain;
 }
