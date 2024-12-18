@@ -528,4 +528,150 @@
   .footer__right-function-title::after {
     margin-top: 10px;
   }
+
+  .statistic__value-item {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .demo__content-title {
+    font-size: 48px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__right {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .header__burger {
+    right: 40px;
+  }
+
+  .container {
+    max-width: 350px;
+  }
+
+  .container h2 {
+    font-size: 28px;
+  }
+
+  .container h3 {
+    font-size: 12px;
+  }
+
+  .header__button-login {
+    left: 80px;
+  }
+
+  .header__button-signup {
+    right: 80px;
+  }
+
+  .clients__icons {
+    gap: 10px;
+  }
+
+  .clients__icons-item {
+    max-width: 30px;
+  }
+
+  .community__title {
+    text-wrap: wrap;
+  }
+
+  .community__container {
+    gap: 35px;
+  }
+
+  .article__right-title {
+    margin-left: 2%;
+  }
+
+  .advantages__bottom-wrap-title {
+    font-size: 14px;
+  }
+
+  .demo__content-title {
+    line-height: 44px;
+  }
+
+  .footer__right {
+    align-items: center;
+  }
+
+  .footer__right-function-title {
+    align-self: center;
+  }
+
+  .footer__left-socialnetwork {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container {
+    max-width: 320px;
+  }
+
+  .header__button-login {
+    left: 50px;
+  }
+
+  .header__button-signup {
+    right: 50px;
+  }
+
+  .article__right-button {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .advantages__bottom-wrap-button {
+    margin: 5px;
+  }
+
+  .advantages__bottom-readmore-item {
+    max-width: 270px;
+  }
+
+  .advantages__bottom-item-wrap {
+    max-width: 230px;
+  }
+}
+
+@media screen and (max-width: 305px) {
+  .container {
+    max-width: 295px;
+  }
+
+  .container h2 {
+    font-size: 16px;
+  }
+
+  .container h3 {
+    font-size: 10px;
+  }
+
+  .slider__illustration {
+    max-width: 255px;
+  }
+
+  .header__burger {
+    right: 10px;
+  }
+
+  .header__logo {
+    max-width: 100px;
+  }
+
+  .community__container {
+    gap: 75px;
+  }
 }
