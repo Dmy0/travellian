@@ -4,6 +4,7 @@
   }
 
   .slider {
+    gap: 50px;
     padding: 80px 25px;
   }
 
@@ -454,6 +455,7 @@
 
   .statistic__value-item-right {
     align-items: center;
+    margin: 0 auto;
   }
 
   .statistic__value-item-title {
@@ -548,10 +550,6 @@
     max-width: 350px;
   }
 
-  .container h2 {
-    font-size: 28px;
-  }
-
   .clients__icons {
     gap: 10px;
   }
@@ -626,10 +624,6 @@
     max-width: 295px;
   }
 
-  .container h2 {
-    font-size: 16px;
-  }
-
   .slider__illustration {
     max-width: 255px;
   }
@@ -644,5 +638,11 @@
 
   .community__container {
     gap: 75px;
+  }
+
+  .demo {
+    font-size: 24px;
+    padding: 10px;
+    line-height: 32px;
   }
 }
