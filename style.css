@@ -30,7 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 25px 12px;
   position: relative;
 }
 
@@ -171,7 +171,7 @@ header {
 }
 
 .slider__content-subtitle {
-  margin-top: 16px;
+
   color: rgba(113, 113, 113, 1);
   font-size: 1rem;
 }
@@ -185,6 +185,7 @@ header {
   border: 0;
   border-radius: 6px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .slider__button {
@@ -200,7 +201,7 @@ header {
 .clients {
   height: 190px;
   width: 100%;
-  margin-top: 40px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +217,7 @@ header {
 }
 
 .clients__subtitle {
-  margin-top: 8px;
+
   font-size: 16px;
   color: rgba(113, 113, 113, 1);
 }
@@ -237,7 +238,7 @@ header {
 
 .community {
   width: 100%;
-  margin-top: 40px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,7 +246,6 @@ header {
 }
 
 .community__container {
-  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -265,7 +265,7 @@ header {
   font-size: 28px;
   line-height: 36px;
   font-weight: 700;
-  margin-top: 16px;
+
   text-align: center;
 }
 
@@ -284,7 +284,7 @@ header {
   font-size: 28px;
   line-height: 36px;
   font-weight: 700;
-  margin-top: 16px;
+
   text-align: center;
 }
 
@@ -294,7 +294,7 @@ header {
   line-height: 20px;
   font-weight: 400;
   max-width: 250px;
-  height: 60px;
+  height: 100%;
   margin: 8px;
   text-align: center;
 }
@@ -308,7 +308,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  margin-top: 48px;
+
   width: 100%;
 }
 
@@ -329,11 +329,7 @@ header {
   font-weight: 400;
   line-height: 20px;
   font-size: 14px;
-  margin-top: 16px;
-}
 
-.instuction__button {
-  margin-top: 32px;
 }
 
 .instuction__button:hover {
@@ -350,6 +346,7 @@ header {
   align-items: inherit;
   gap: inherit;
   flex-direction: inherit;
+  padding: 20px 25px;
 }
 
 .statistic {
@@ -357,7 +354,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 48px;
+
   width: 100%;
   gap: 72px;
   flex-wrap: wrap;
@@ -375,7 +372,7 @@ header {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin-top: 8px;
+
 }
 
 .statistic__right {
@@ -395,7 +392,6 @@ header {
 .statistic__value-item {
   display: flex;
   gap: 8px;
-  /* width: 50%; */
   max-width: 50%;
   align-items: center;
   min-width: 255px;
@@ -430,7 +426,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  margin-top: 48px;
+ 
   width: 100%;
 }
 
@@ -455,13 +451,12 @@ header {
   font-weight: 400;
   line-height: 20px;
   font-size: 14px;
-  margin-top: 16px;
 }
 
 .article__right-author {
   color: rgba(76, 175, 79, 1);
   font-weight: 600;
-  margin-top: 16px;
+
   font-size: 20px;
   line-height: 28px;
 }
@@ -471,14 +466,14 @@ header {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin-top: 8px;
+
 }
 
 .article__right-icon {
   display: flex;
   justify-content: space-between;
   gap: 41px;
-  margin-top: 32px;
+
 }
 
 .clients__icons-item {
@@ -493,6 +488,7 @@ header {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
+  margin-top: 10px;
 }
 
 .article__right-button:hover {
@@ -524,7 +520,7 @@ header {
   font-size: 28px;
   line-height: 36px;
   font-weight: 700;
-  margin-top: 16px;
+
   text-align: center;
 }
 
@@ -540,18 +536,16 @@ header {
 
 .advantages__bottom {
   display: flex;
-}
-
-.advantages__bottom-readmore {
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  margin-top: 16px;
 }
+
 
 .advantages__bottom-readmore-item {
   max-width: 365px;
+  min-width: 365px;
   position: relative;
 }
 
@@ -592,7 +586,7 @@ header {
 
 .demo {
   background-color: rgba(245, 247, 250, 1);
-  margin-top: 143px;
+
   padding: 32px;
 }
 
@@ -657,7 +651,6 @@ header {
 }
 
 .footer__left-copyright-rights {
-  margin-top: 8px;
   color: rgba(245, 247, 250, 1);
   font-weight: 4oo;
   font-size: 14px;
@@ -697,7 +690,6 @@ header {
 }
 
 .footer__right-function-item {
-  margin-top: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -901,7 +893,6 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 15px;
   max-width: 250px;
 }
 
