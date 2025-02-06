@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const del = require('del');
 const path = require('path');
+const sass = require('gulp-sass')(require('sass'));
 
 // Paths
 const paths = {
@@ -37,8 +37,15 @@ function copyJs() {
     return gulp.src(paths.src.js).pipe(gulp.dest(paths.build.js));
 }
 // Copy Css to Build
-function copyCss() {
-    return gulp.src(paths.src.css).pipe(gulp.dest(paths.build.css));
+async function copyCss() {
+    const autoprefixer = (await import("gulp-autoprefixer")).default;
+    return gulp.src("./src/sass/**/main.sass")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer({
+        overrideBrowserslist: ['last 16 versions'],
+        cascade: false
+    }))
+    .pipe(gulp.dest(paths.build.css));
 }
 
 // Copy Images to Build
@@ -63,6 +70,7 @@ function serve() {
 
     gulp.watch(paths.src.html, copyHtml).on('change', browserSync.reload);
     gulp.watch(paths.src.js, copyJs).on('change', browserSync.reload);
+    gulp.watch(paths.src.css, copyCss).on('change', browserSync.reload);
     gulp.watch(paths.src.images, copyImages).on('change', browserSync.reload);
     gulp.watch(paths.src.fonts, copyFonts).on('change', browserSync.reload);
 }
