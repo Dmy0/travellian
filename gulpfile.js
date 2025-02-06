@@ -1,13 +1,12 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const path = require('path');
 const sass = require('gulp-sass')(require('sass'));
 
 // Paths
 const paths = {
     src: {
         html: './src/**/*.html',
-        css: './src/css/**/*.css',
+        css: './src/sass/**/*.sass',
         js: './src/js/**/*.js',
         images: './src/img/**/*.*',
         fonts: './src/fonts/**/*.*',
