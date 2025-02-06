@@ -24,3 +24,114 @@ ul, li, p, h1, h2, h3 {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url("../fonts/PlayfairDisplay-VariableFont.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PlayfairDisplay-Italic";
+  src: url("../fonts/PlayfairDisplay-Italic-VariableFont.woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik-Regular";
+  src: url("../fonts/Rubik-VariableFont.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: url("../fonts/Rubik-Italic-VariableFont.woff");
+  font-weight: 400;
+  font-style: italic;
+}
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 340px;
+  padding: 32px 180px;
+  width: 100%;
+}
+.header__logo {
+  background: url(../img/header/header-logo.png) no-repeat 50% 0/contain;
+  width: 235px;
+  height: 45px;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 32px;
+}
+.header__nav-item {
+  font-family: Rubik-Regular, sans-serif;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.header__nav-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background-color: #FF7757;
+  -webkit-transition: width 0.5s ease, left 0.5s ease;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+.header__nav-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__buttons-login {
+  cursor: pointer;
+  padding: 20px 32px;
+  border: 0;
+  border-radius: 12px;
+  background-color: inherit;
+  color: #000000;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  font-family: Rubik-Regular, sans-serif;
+  font-size: 20px;
+}
+.header__buttons-login:hover {
+  background-color: #FF7757;
+}
+.header__buttons-signup {
+  cursor: pointer;
+  padding: 20px 32px;
+  border: 0;
+  white-space: nowrap;
+  border-radius: 12px;
+  background-color: #FF7757;
+  color: #ffffff;
+  font-family: Rubik-Regular, sans-serif;
+  font-size: 20px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.header__buttons-signup:hover {
+  background-color: inherit;
+}

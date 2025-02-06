@@ -1,1 +1,75 @@
+$font-playfair-display-regular: PlayfairDisplay-Regular, sans-serif
+$font-playfair-display-italic: PlayfairDisplay-Italic, sans-serif
+$font-rubik-regular: Rubik-Regular, sans-serif
+$font-rubik-italic: Rubik-Italic, sans-serif
 
+$white: #ffffff
+$black: #000000
+$coral-red: #FF7757
+$peach-pink: #FFD2C7
+$deep-coffee: #331811
+$mahogany-brown: #61291C
+
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 340px
+    padding: 32px 180px
+    width: 100%
+    &__logo
+        background: url(../img/header/header-logo.png) no-repeat 50% 0/contain
+        width: 235px
+        height: 45px
+    &__nav
+        display: flex
+        align-content: center
+        justify-content: center
+        gap: 32px
+        &-item
+            font-family: $font-rubik-regular
+            // color change to white
+            color: $black
+            font-size: 20px
+            cursor: pointer
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                left: 50%
+                bottom: -4px
+                width: 0
+                height: 3px
+                background-color: $coral-red
+                transition: width 0.5s ease, left 0.5s ease
+            &:hover::after
+                width: 100%
+                left: 0
+    &__buttons
+        display: flex
+        &-login
+            cursor: pointer
+            padding: 20px 32px
+            border: 0
+            border-radius: 12px
+            background-color: inherit
+            // color change to white
+            color: $black
+            transition: background-color .3s ease
+            font-family: $font-rubik-regular
+            font-size: 20px
+            &:hover
+                background-color: $coral-red
+        &-signup
+            cursor: pointer
+            padding: 20px 32px
+            border: 0
+            white-space: nowrap
+            border-radius: 12px
+            background-color: $coral-red
+            color: $white
+            font-family: $font-rubik-regular
+            font-size: 20px
+            transition: background-color .3s ease
+            &:hover
+                background-color: inherit
