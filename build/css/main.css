@@ -28,59 +28,67 @@ ul, li, p, h1, h2, h3 {
 @font-face {
   font-family: "PlayfairDisplay-Regular";
   src: url("../fonts/PlayfairDisplay-VariableFont.woff");
-  font-weight: 400;
+  font-weight: normal;
 }
 @font-face {
   font-family: "PlayfairDisplay-Italic";
   src: url("../fonts/PlayfairDisplay-Italic-VariableFont.woff");
-  font-weight: 400;
+  font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Rubik-Regular";
   src: url("../fonts/Rubik-VariableFont.woff");
-  font-weight: 400;
+  font-weight: normal;
 }
 @font-face {
   font-family: "Rubik-Italic";
   src: url("../fonts/Rubik-Italic-VariableFont.woff");
-  font-weight: 400;
+  font-weight: normal;
   font-style: italic;
 }
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  height: 128px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 340px;
   padding: 32px 180px;
-  width: 100%;
 }
 .header__logo {
+  content: "";
   background: url(../img/header/header-logo.png) no-repeat 50% 0/contain;
-  width: 235px;
+  width: 100%;
+  max-width: 235px;
   height: 45px;
 }
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-  align-content: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 32px;
 }
 .header__nav-item {
-  font-family: Rubik-Regular, sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 20px;
+  font-family: Rubik-Regular, sans-serif;
   cursor: pointer;
   position: relative;
 }
@@ -90,10 +98,10 @@ ul, li, p, h1, h2, h3 {
   left: 50%;
   bottom: -4px;
   width: 0;
-  height: 3px;
+  height: 4px;
   background-color: #FF7757;
-  -webkit-transition: width 0.5s ease, left 0.5s ease;
-  transition: width 0.5s ease, left 0.5s ease;
+  -webkit-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 .header__nav-item:hover::after {
   width: 100%;
@@ -103,35 +111,136 @@ ul, li, p, h1, h2, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 5px;
 }
 .header__buttons-login {
-  cursor: pointer;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: inherit;
   padding: 20px 32px;
   border: 0;
   border-radius: 12px;
-  background-color: inherit;
-  color: #000000;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  font-family: Rubik-Regular, sans-serif;
-  font-size: 20px;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 .header__buttons-login:hover {
   background-color: #FF7757;
 }
 .header__buttons-signup {
-  cursor: pointer;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #FF7757;
   padding: 20px 32px;
   border: 0;
-  white-space: nowrap;
   border-radius: 12px;
-  background-color: #FF7757;
-  color: #ffffff;
-  font-family: Rubik-Regular, sans-serif;
-  font-size: 20px;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+  white-space: nowrap;
 }
 .header__buttons-signup:hover {
   background-color: inherit;
+}
+
+.slider {
+  width: 100%;
+  height: 1200px;
+  background: url(../img/slider/slider-bg.png) center/cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 170px;
+}
+.booking__top {
+  padding-left: 182px;
+  max-width: 1100px;
+}
+.booking__top-title {
+  font-size: 84px;
+  color: #ffffff;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+  font-weight: normal;
+}
+.booking__top-subtitle {
+  font-size: 24px;
+  color: #ffffff;
+  font-family: Rubik-Regular, sans-serif;
+  font-weight: normal;
+  padding-top: 16px;
+}
+
+.booking__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 40px;
+  background: #fff;
+  padding-left: 182px;
+  border-radius: 0 20px 20px 0;
+}
+.booking__bottom-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+}
+.booking__bottom-field label {
+  color: #767E86;
+  font-family: Rubik-Regular, sans-serif;
+  font-size: 16px;
+}
+.booking__bottom-field input {
+  cursor: pointer;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  color: #172432;
+  font-size: 20px;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+}
+.booking__bottom-btn {
+  border: 0;
+  background-color: #FF7757;
+  padding: 60px 20px;
+  color: #ffffff;
+  font-size: 36px;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+  border-radius: 0 20px 20px 0;
 }

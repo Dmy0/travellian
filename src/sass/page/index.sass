@@ -9,28 +9,35 @@ $coral-red: #FF7757
 $peach-pink: #FFD2C7
 $deep-coffee: #331811
 $mahogany-brown: #61291C
-
+$grey: #767E86
+$dark-blue: #172432
 .header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 5
+    height: 128px
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: center
     gap: 340px
     padding: 32px 180px
-    width: 100%
     &__logo
+        content: ""
         background: url(../img/header/header-logo.png) no-repeat 50% 0/contain
-        width: 235px
+        width: 100%
+        max-width: 235px
         height: 45px
     &__nav
         display: flex
-        align-content: center
         justify-content: center
+        align-items: center
         gap: 32px
         &-item
-            font-family: $font-rubik-regular
-            // color change to white
-            color: $black
+            color: $white
             font-size: 20px
+            font-family: $font-rubik-regular
             cursor: pointer
             position: relative
             &::after
@@ -39,37 +46,97 @@ $mahogany-brown: #61291C
                 left: 50%
                 bottom: -4px
                 width: 0
-                height: 3px
+                height: 4px
                 background-color: $coral-red
-                transition: width 0.5s ease, left 0.5s ease
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out
             &:hover::after
                 width: 100%
                 left: 0
     &__buttons
         display: flex
+        align-items: center
+        justify-content: center
+        gap: 5px
         &-login
-            cursor: pointer
+            font-size: 20px
+            color: $white
+            background-color: inherit
             padding: 20px 32px
             border: 0
             border-radius: 12px
-            background-color: inherit
-            // color change to white
-            color: $black
-            transition: background-color .3s ease
-            font-family: $font-rubik-regular
-            font-size: 20px
+            transition: background-color .4s ease-in-out
             &:hover
                 background-color: $coral-red
         &-signup
-            cursor: pointer
+            font-size: 20px
+            color: $white
+            background-color: $coral-red
             padding: 20px 32px
             border: 0
-            white-space: nowrap
             border-radius: 12px
-            background-color: $coral-red
-            color: $white
-            font-family: $font-rubik-regular
-            font-size: 20px
-            transition: background-color .3s ease
+            transition: background-color .4s ease-in-out
+            white-space: nowrap
             &:hover
                 background-color: inherit
+
+.slider
+    width: 100%
+    height: 1200px
+    background: url(../img/slider/slider-bg.png) center/cover no-repeat
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+.booking
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-direction: column
+    gap: 170px
+    &__top
+        padding-left: 182px
+        max-width: 1100px
+        &-title
+            font-size: 84px
+            color: $white
+            font-family: $font-playfair-display-regular
+            font-weight: normal
+        &-subtitle
+            font-size: 24px
+            color: $white
+            font-family: $font-rubik-regular
+            font-weight: normal
+            padding-top: 16px
+
+.booking__bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 40px
+    background: #fff
+    padding-left: 182px
+    border-radius: 0 20px 20px 0
+    &-field
+        display: flex
+        flex-direction: column
+        gap: 12px
+        label
+            color: $grey
+            font-family: $font-rubik-regular
+            font-size: 16px
+        input
+            cursor: pointer
+            padding-bottom: 10px
+            border: none
+            border-bottom: 1px solid $black
+            color: $dark-blue
+            font-size: 20px
+            font-family: $font-playfair-display-regular
+    &-btn
+        border: 0
+        background-color: $coral-red
+        padding: 60px 20px
+        color: $white
+        font-size: 36px
+        font-family: $font-playfair-display-regular
+        border-radius: 0 20px 20px 0
