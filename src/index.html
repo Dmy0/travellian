@@ -13,6 +13,7 @@
     />
   </head>
   <body>
+    <div class="slider"></div>
     <div class="header">
       <div class="header__logo"></div>
       <div class="header__nav">
@@ -24,41 +25,65 @@
       </div>
       <div class="header__buttons">
         <button class="header__buttons-login">Login</button>
-        <button class="header__buttons-signup">Sign Up</button>
+        <button class="header__buttons-signup">Sign up</button>
       </div>
-    </div>   
     </div>
-    <div class="slider">
-      <div class="booking">
-        <div class="booking__top">
-          <h2 class="booking__top-title">
-          Start your unforgettable 
-          journey with us.
-        </h2>
-        <h3 class="booking__top-subtitle">
-          The best travel for your journey begins now
-        </h2>
-        </div>      
-        <div class="booking__bottom">
-          <div class="booking__bottom-field">
-            <label for="destination">DESTINATION</label>
-            <input type="text" id="destination" value="Dubai" readonly>
-          </div>
-          <div class="booking__bottom-field">
-            <label for="person">PERSON</label>
-            <input id="person" value="1"></input>
-          </div>
-          <div class="booking__bottom-field">
-            <label for="checkin">CHECK IN</label>
-            <input type="date" id="checkin" value="Sun, 17th Sep 2020" readonly>
-          </div>
-          <div class="booking__bottom-field">
-            <label for="checkout">CHECK OUT</label>
-            <input type="date" id="checkout" value="Tue, 17th Oct 2020" readonly>
-          </div>
-          <button class="booking__bottom-btn">Book Now</button>
+    <div class="booking">
+      <div class="booking__top">
+        <h2 class="booking__top-title">
+        Start your unforgettable 
+        journey with us.
+      </h2>
+      <h3 class="booking__top-subtitle">
+        The best travel for your journey begins now
+      </h2>
+      </div>      
+      <div class="booking__bottom">
+        <div class="booking__bottom-field">
+          <label for="destination">DESTINATION</label>
+          <input type="text" id="destination" value="Dubai" readonly>
         </div>
+        <div class="booking__bottom-field">
+          <label for="person">PERSON</label>
+          <input id="person" value="1"></input>
+        </div>
+        <div class="booking__bottom-field">
+          <label for="checkin">CHECK IN</label>
+          <input type="date" id="checkin" value="Sun, 17th Sep 2020" readonly>
+        </div>
+        <div class="booking__bottom-field">
+          <label for="checkout">CHECK OUT</label>
+          <input type="date" id="checkout" value="Tue, 17th Oct 2020" readonly>
+        </div>
+        <button class="booking__bottom-btn"><p>Book Now</p></button>
+      </div>
     </div>
+      <div class="distanation">
+        <div class="distanation__top">
+          <div class="distanation__top-left"></div>
+          <div class="distanation__top-right"></div>
+          <div class="distanation__top-title">Popular Destinations</div>
+          <div class="distanation__top-subtitle">Most popular destinations around the world, from historical places to natural wonders.</div>
+        </div>
+        <div class="distanation__slider">
+          <div class="distanation__slider-item">
+            <p>Monument of Berlin</p>
+            <p>Berlin, Germany</p>
+          </div>
+          <div class="distanation__slider-item">
+            <p>Millennium Bridge</p>
+            <p>London, United Kingdom</p>
+          </div>
+          <div class="distanation__slider-item">
+            <p>Rialto Bridge</p>
+            <p>Venice, Italy</p>
+          </div>
+          <div class="distanation__slider-item">
+            <p>Sea of Orange Tiles</p>
+            <p>Lisbon, Portugal</p>
+          </div>
+        </div>
+      </div>
   </body>
   <script src="main.js"></script>
 </html>

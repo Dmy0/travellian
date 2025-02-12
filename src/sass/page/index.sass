@@ -11,33 +11,35 @@ $deep-coffee: #331811
 $mahogany-brown: #61291C
 $grey: #767E86
 $dark-blue: #172432
-.header
+
+.slider
     position: absolute
-    top: 0
-    left: 0
     width: 100%
-    z-index: 5
-    height: 128px
+    height: 980px
+    background: url(../img/slider/slider-bg.png) center/cover no-repeat
+    z-index: -1
+
+.header
     display: flex
+    gap: 345px
     align-items: center
-    justify-content: center
-    gap: 340px
-    padding: 32px 180px
+    justify-content: space-between
+    padding: 50px 180px
     &__logo
         content: ""
         background: url(../img/header/header-logo.png) no-repeat 50% 0/contain
-        width: 100%
         max-width: 235px
+        width: 230px
         height: 45px
     &__nav
         display: flex
-        justify-content: center
-        align-items: center
         gap: 32px
+        align-items: center
+        justify-content: center
         &-item
             color: $white
-            font-size: 20px
             font-family: $font-rubik-regular
+            font-size: 20px
             cursor: pointer
             position: relative
             &::after
@@ -46,46 +48,40 @@ $dark-blue: #172432
                 left: 50%
                 bottom: -4px
                 width: 0
-                height: 4px
+                height: 3px
                 background-color: $coral-red
-                transition: width 0.3s ease-in-out, left 0.3s ease-in-out
+                transition: width 0.3s ease-in-out
+                transform: translateX(-50%)
             &:hover::after
                 width: 100%
-                left: 0
     &__buttons
         display: flex
         align-items: center
-        justify-content: center
-        gap: 5px
+        justify-content: space-between
+        gap: 7px
         &-login
             font-size: 20px
             color: $white
             background-color: inherit
+            font-family: $font-rubik-regular
             padding: 20px 32px
             border: 0
             border-radius: 12px
-            transition: background-color .4s ease-in-out
+            transition: background-color .3s ease-in-out
             &:hover
                 background-color: $coral-red
         &-signup
             font-size: 20px
             color: $white
             background-color: $coral-red
+            font-family: $font-rubik-regular
             padding: 20px 32px
             border: 0
             border-radius: 12px
-            transition: background-color .4s ease-in-out
+            transition: background-color .3s ease-in-out
             white-space: nowrap
             &:hover
                 background-color: inherit
-
-.slider
-    width: 100%
-    height: 1200px
-    background: url(../img/slider/slider-bg.png) center/cover no-repeat
-    display: flex
-    justify-content: flex-start
-    align-items: center
 
 .booking
     display: flex
@@ -93,6 +89,7 @@ $dark-blue: #172432
     align-items: flex-start
     flex-direction: column
     gap: 170px
+    padding: 80px 0
     &__top
         padding-left: 182px
         max-width: 1100px
@@ -140,3 +137,122 @@ $dark-blue: #172432
         font-size: 36px
         font-family: $font-playfair-display-regular
         border-radius: 0 20px 20px 0
+        position: relative
+        max-width: 170px
+        cursor: pointer
+        &::after
+            content: ""
+            position: absolute
+            background: url(../img/booking/booking-arrow.png) no-repeat 50% 0/contain
+            width: 21px
+            height: 21px
+            right: 0
+            top: 50%
+            transform: translate(-50%,-50%)
+        p
+            margin-left: -30px
+
+.distanation
+    padding: 140px 0 140px 180px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    gap: 100px
+    width: 100%
+    &__top
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        gap: 32px
+        position: relative
+        &-left
+            content: ""
+            position: absolute
+            bottom: 0
+            right: 280px
+            background: url(../img/distanation/move.png) no-repeat 50% 0/contain
+            width: 60px
+            height: 66px
+            cursor: pointer
+            transform: background .3s ease-in-out
+            &:hover
+                background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+                cursor: pointer
+                transform: scale(-1,1)
+        &-right
+            content: ""
+            position: absolute
+            bottom: 0
+            right: 200px
+            background: url(../img/distanation/move-right.png) no-repeat 50% 0/contain
+            width: 60px
+            height: 66px
+            cursor: pointer
+            transform: background .3s ease-in-out
+            &:hover
+                background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+                cursor: pointer
+        &-title
+            color: $dark-blue
+            font-size: 64px
+            font-family: $font-playfair-display-regular
+            position: relative
+            padding-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 365px
+                height: 3px
+                background-color: $coral-red
+        &-subtitle
+            color: $grey
+            font-size: 24px
+            font-family: $font-rubik-regular
+    &__slider
+        display: flex
+        gap: 32px
+        align-items: center
+        justify-content: center
+        overflow-x: auto
+        width: 100%
+        height: 100%
+        position: relative
+        &-item:nth-child(1)
+            display: flex
+            flex-direction: column
+            background: url(../img/distanation/slider/berlin.png) no-repeat 50% 0/contain
+            width: 500px
+            height: 670px
+            p:nth-child(1)
+                margin: 420px 0 0 24px
+                color: $white
+                font-size: 28px
+                font-family: $font-playfair-display-regular
+            p:nth-child(2)
+                margin: 17px 0 40px 40px
+                color: $white
+                font-family: $font-rubik-regular
+                font-size: 24px
+            &::before
+                content: ""
+                position: absolute
+                background: url(../img/distanation/slider/location-icon.png) no-repeat 50% 0/contain
+                left: 0
+                bottom: 42px
+                width: 24px
+                height: 24px
+        &-item:nth-child(2)
+            background: url(../img/distanation/slider/london.png) no-repeat 50% 0/contain
+            width: 500px
+            height: 670px
+        &-item:nth-child(3)
+            background: url(../img/distanation/slider/venice.png) no-repeat 50% 0/contain
+            width: 500px
+            height: 670px
+        &-item:nth-child(4)
+            background: url(../img/distanation/slider/lisbon.png) no-repeat 50% 0/contain
+            width: 500px
+            height: 670px

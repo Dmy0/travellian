@@ -47,48 +47,50 @@ ul, li, p, h1, h2, h3 {
   font-weight: normal;
   font-style: italic;
 }
-.header {
+.slider {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 5;
-  height: 128px;
+  height: 980px;
+  background: url(../img/slider/slider-bg.png) center/cover no-repeat;
+  z-index: -1;
+}
+
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 345px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 340px;
-  padding: 32px 180px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 50px 180px;
 }
 .header__logo {
   content: "";
   background: url(../img/header/header-logo.png) no-repeat 50% 0/contain;
-  width: 100%;
   max-width: 235px;
+  width: 230px;
   height: 45px;
 }
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  gap: 32px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 32px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .header__nav-item {
   color: #ffffff;
-  font-size: 20px;
   font-family: Rubik-Regular, sans-serif;
+  font-size: 20px;
   cursor: pointer;
   position: relative;
 }
@@ -98,14 +100,16 @@ ul, li, p, h1, h2, h3 {
   left: 50%;
   bottom: -4px;
   width: 0;
-  height: 4px;
+  height: 3px;
   background-color: #FF7757;
-  -webkit-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .header__nav-item:hover::after {
   width: 100%;
-  left: 0;
 }
 .header__buttons {
   display: -webkit-box;
@@ -114,20 +118,21 @@ ul, li, p, h1, h2, h3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 5px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 7px;
 }
 .header__buttons-login {
   font-size: 20px;
   color: #ffffff;
   background-color: inherit;
+  font-family: Rubik-Regular, sans-serif;
   padding: 20px 32px;
   border: 0;
   border-radius: 12px;
-  -webkit-transition: background-color 0.4s ease-in-out;
-  transition: background-color 0.4s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .header__buttons-login:hover {
   background-color: #FF7757;
@@ -136,30 +141,16 @@ ul, li, p, h1, h2, h3 {
   font-size: 20px;
   color: #ffffff;
   background-color: #FF7757;
+  font-family: Rubik-Regular, sans-serif;
   padding: 20px 32px;
   border: 0;
   border-radius: 12px;
-  -webkit-transition: background-color 0.4s ease-in-out;
-  transition: background-color 0.4s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   white-space: nowrap;
 }
 .header__buttons-signup:hover {
   background-color: inherit;
-}
-
-.slider {
-  width: 100%;
-  height: 1200px;
-  background: url(../img/slider/slider-bg.png) center/cover no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .booking {
@@ -177,6 +168,7 @@ ul, li, p, h1, h2, h3 {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 170px;
+  padding: 80px 0;
 }
 .booking__top {
   padding-left: 182px;
@@ -243,4 +235,177 @@ ul, li, p, h1, h2, h3 {
   font-size: 36px;
   font-family: PlayfairDisplay-Regular, sans-serif;
   border-radius: 0 20px 20px 0;
+  position: relative;
+  max-width: 170px;
+  cursor: pointer;
+}
+.booking__bottom-btn::after {
+  content: "";
+  position: absolute;
+  background: url(../img/booking/booking-arrow.png) no-repeat 50% 0/contain;
+  width: 21px;
+  height: 21px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.booking__bottom-btn p {
+  margin-left: -30px;
+}
+
+.distanation {
+  padding: 140px 0 140px 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 100px;
+  width: 100%;
+}
+.distanation__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+}
+.distanation__top-left {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 280px;
+  background: url(../img/distanation/move.png) no-repeat 50% 0/contain;
+  width: 60px;
+  height: 66px;
+  cursor: pointer;
+  -webkit-transform: background 0.3s ease-in-out;
+  -ms-transform: background 0.3s ease-in-out;
+  transform: background 0.3s ease-in-out;
+}
+.distanation__top-left:hover {
+  background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain;
+  cursor: pointer;
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.distanation__top-right {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 200px;
+  background: url(../img/distanation/move-right.png) no-repeat 50% 0/contain;
+  width: 60px;
+  height: 66px;
+  cursor: pointer;
+  -webkit-transform: background 0.3s ease-in-out;
+  -ms-transform: background 0.3s ease-in-out;
+  transform: background 0.3s ease-in-out;
+}
+.distanation__top-right:hover {
+  background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain;
+  cursor: pointer;
+}
+.distanation__top-title {
+  color: #172432;
+  font-size: 64px;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+  position: relative;
+  padding-bottom: 20px;
+}
+.distanation__top-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 365px;
+  height: 3px;
+  background-color: #FF7757;
+}
+.distanation__top-subtitle {
+  color: #767E86;
+  font-size: 24px;
+  font-family: Rubik-Regular, sans-serif;
+}
+.distanation__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow-x: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.distanation__slider-item:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: url(../img/distanation/slider/berlin.png) no-repeat 50% 0/contain;
+  width: 500px;
+  height: 670px;
+}
+.distanation__slider-item:nth-child(1) p:nth-child(1) {
+  margin: 420px 0 0 24px;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+}
+.distanation__slider-item:nth-child(1) p:nth-child(2) {
+  margin: 17px 0 40px 40px;
+  color: #ffffff;
+  font-family: Rubik-Regular, sans-serif;
+  font-size: 24px;
+}
+.distanation__slider-item:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background: url(../img/distanation/slider/location-icon.png) no-repeat 50% 0/contain;
+  left: 0;
+  bottom: 42px;
+  width: 24px;
+  height: 24px;
+}
+.distanation__slider-item:nth-child(2) {
+  background: url(../img/distanation/slider/london.png) no-repeat 50% 0/contain;
+  width: 500px;
+  height: 670px;
+}
+.distanation__slider-item:nth-child(3) {
+  background: url(../img/distanation/slider/venice.png) no-repeat 50% 0/contain;
+  width: 500px;
+  height: 670px;
+}
+.distanation__slider-item:nth-child(4) {
+  background: url(../img/distanation/slider/lisbon.png) no-repeat 50% 0/contain;
+  width: 500px;
+  height: 670px;
 }
