@@ -358,54 +358,117 @@ ul, li, p, h1, h2, h3 {
   justify-content: center;
   overflow-x: auto;
   width: 100%;
-  height: 100%;
-  position: relative;
-}
-.distanation__slider-item:nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background: url(../img/distanation/slider/berlin.png) no-repeat 50% 0/contain;
-  width: 500px;
   height: 670px;
 }
+.distanation__slider-item:nth-child(1) {
+  background: url(../img/distanation/slider/berlin.png) no-repeat 50% 0/cover;
+  width: 500px;
+  height: 670px;
+  position: relative;
+  border-radius: 26px;
+}
 .distanation__slider-item:nth-child(1) p:nth-child(1) {
-  margin: 420px 0 0 24px;
+  margin: 539px 0 0 24px;
   color: #ffffff;
   font-size: 28px;
   font-family: PlayfairDisplay-Regular, sans-serif;
 }
 .distanation__slider-item:nth-child(1) p:nth-child(2) {
-  margin: 17px 0 40px 40px;
+  margin: 17px 0 40px 50px;
   color: #ffffff;
   font-family: Rubik-Regular, sans-serif;
   font-size: 24px;
 }
-.distanation__slider-item:nth-child(1)::before {
+.distanation__slider-item:nth-child(1) p:nth-child(2)::before {
   content: "";
   position: absolute;
   background: url(../img/distanation/slider/location-icon.png) no-repeat 50% 0/contain;
-  left: 0;
-  bottom: 42px;
+  left: 24px;
+  bottom: 53px;
   width: 24px;
   height: 24px;
 }
 .distanation__slider-item:nth-child(2) {
-  background: url(../img/distanation/slider/london.png) no-repeat 50% 0/contain;
+  background: url(../img/distanation/slider/london.png) no-repeat 50% 0/cover;
   width: 500px;
   height: 670px;
+  position: relative;
+  border-radius: 26px;
+}
+.distanation__slider-item:nth-child(2) p:nth-child(1) {
+  margin: 539px 0 0 24px;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+}
+.distanation__slider-item:nth-child(2) p:nth-child(2) {
+  margin: 17px 0 40px 50px;
+  color: #ffffff;
+  font-family: Rubik-Regular, sans-serif;
+  font-size: 24px;
+}
+.distanation__slider-item:nth-child(2) p:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background: url(../img/distanation/slider/location-icon.png) no-repeat 50% 0/contain;
+  left: 24px;
+  bottom: 53px;
+  width: 24px;
+  height: 24px;
 }
 .distanation__slider-item:nth-child(3) {
-  background: url(../img/distanation/slider/venice.png) no-repeat 50% 0/contain;
+  background: url(../img/distanation/slider/venice.png) no-repeat 50% 0/cover;
   width: 500px;
   height: 670px;
+  position: relative;
+  border-radius: 26px;
+}
+.distanation__slider-item:nth-child(3) p:nth-child(1) {
+  margin: 539px 0 0 24px;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+}
+.distanation__slider-item:nth-child(3) p:nth-child(2) {
+  margin: 17px 0 40px 50px;
+  color: #ffffff;
+  font-family: Rubik-Regular, sans-serif;
+  font-size: 24px;
+}
+.distanation__slider-item:nth-child(3) p:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background: url(../img/distanation/slider/location-icon.png) no-repeat 50% 0/contain;
+  left: 24px;
+  bottom: 53px;
+  width: 24px;
+  height: 24px;
 }
 .distanation__slider-item:nth-child(4) {
-  background: url(../img/distanation/slider/lisbon.png) no-repeat 50% 0/contain;
+  background: url(../img/distanation/slider/lisbon.png) no-repeat 50% 0/cover;
   width: 500px;
   height: 670px;
+  position: relative;
+  border-radius: 26px;
+}
+.distanation__slider-item:nth-child(4) p:nth-child(1) {
+  margin: 539px 0 0 24px;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: PlayfairDisplay-Regular, sans-serif;
+}
+.distanation__slider-item:nth-child(4) p:nth-child(2) {
+  margin: 17px 0 40px 50px;
+  color: #ffffff;
+  font-family: Rubik-Regular, sans-serif;
+  font-size: 24px;
+}
+.distanation__slider-item:nth-child(4) p:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background: url(../img/distanation/slider/location-icon.png) no-repeat 50% 0/contain;
+  left: 24px;
+  bottom: 53px;
+  width: 24px;
+  height: 24px;
 }
