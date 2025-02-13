@@ -315,3 +315,328 @@ $dark-blue: #172432
                     bottom: 53px
                     width: 24px
                     height: 24px
+
+.offer
+    padding: 140px 180px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-end
+    gap: 100px
+    &__top
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        gap: 32px
+        position: relative
+        width: 100%
+        &-left
+            content: ""
+            position: absolute
+            bottom: -10px
+            left: 100px
+            background: url(../img/distanation/move.png) no-repeat 50% 0/contain
+            width: 60px
+            height: 66px
+            cursor: pointer
+            transform: background .3s ease-in-out
+            &:hover
+                background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+                cursor: pointer
+                transform: scale(-1,1)
+        &-right
+            content: ""
+            position: absolute
+            bottom: -10px
+            left: 170px
+            background: url(../img/distanation/move-right.png) no-repeat 50% 0/contain
+            width: 60px
+            height: 66px
+            cursor: pointer
+            transform: background .3s ease-in-out
+            &:hover
+                background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+                cursor: pointer
+        &-title
+            color: $dark-blue
+            font-size: 64px
+            font-family: $font-playfair-display-regular
+            position: relative
+            padding-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                right: 0
+                bottom: 0
+                width: 240px
+                height: 3px
+                background-color: $coral-red
+        &-subtitle
+            color: $grey
+            font-size: 24px
+            font-family: $font-rubik-regular
+
+.offer__slider
+    display: flex
+    gap: 32px
+    align-items: flex-start
+    justify-content: center
+    max-width: 1600px
+    &-city
+        display: block
+        background: url(../img/offer/lisbon.png) no-repeat 50% 0/cover
+        width: 500px
+        height: 285px
+        border-radius: 26px 26px 0 0
+        &.athens
+            background: url(../img/offer/athens.png) no-repeat 50% 0/cover
+        &.rome
+            background: url(../img/offer/rome.png) no-repeat 50% 0/cover
+    &-content
+        display: flex
+        flex-direction: column
+        gap: 24px
+        padding: 40px 24px
+        max-width: 495px
+        &-overview
+            display: flex
+            flex-direction: column
+            gap: 8px
+        &-title
+            color: $grey
+            font-size: 28px
+            font-family: $font-playfair-display-regular
+        &-rating
+            display: flex
+            align-items: center
+            gap: 4px
+            &-star
+                display: block
+                background: url(../img/offer/star.png) no-repeat 50% 0/contain
+                width: 24px
+                height: 24px
+        p
+            font-family: $font-rubik-regular
+            font-size: 18px
+            color: $dark-blue
+        &-details
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 130px
+            p
+                font-size: 20px
+                font-family: $font-rubik-regular
+                color: $grey
+                span
+                    font-size: 40px
+                    color: $coral-red
+                    font-family: $font-rubik-regular
+                    margin-left: 8px
+            button
+                padding: 20px 40px
+                border: 0
+                border-radius: 12px
+                background-color: $coral-red
+                color: $white
+                transform: all .3s ease-in-out
+                cursor: pointer
+                &:hover
+                    transform: scale(1.2)
+
+.blog
+    padding: 140px 182px
+    display: flex
+    flex-direction: column
+    gap: 100px
+    &__top
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        gap: 32px
+        position: relative
+        width: 100%
+        &-title
+            color: $dark-blue
+            font-size: 64px
+            font-family: $font-playfair-display-regular
+            position: relative
+            padding-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 150px
+                height: 3px
+                background-color: $coral-red
+        &-subtitle
+            color: $grey
+            font-size: 24px
+            font-family: $font-rubik-regular
+    &__container
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 32px
+        max-width: 1550px
+        &-illustration
+            display: block
+            background: url(../img/blog/blog-pict.png) no-repeat 50% 0/cover
+            width: 760px
+            border-radius: 26px
+            max-width: 765px
+            height: 875px
+        &-content
+            display: flex
+            flex-direction: column
+            gap: 24px
+            align-items: flex-start
+            justify-content: flex-start
+            max-width: 760px
+            &-title
+                font-size: 54px
+                color: $dark-blue
+                font-family: $font-playfair-display-regular
+            &-text
+                font-size: 24px
+                color: $dark-blue
+                font-family: $font-rubik-regular
+            &-link
+                text-decoration: none
+                color: $coral-red
+                font-size: 24px
+                font-family: $font-rubik-regular
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    right: -45px
+                    top: 9px
+                    background: url(../img/blog/arrow.png) no-repeat 50% 0/contain
+                    width: 27px
+                    height: 27px
+
+.plans
+    display: flex
+    gap: 100px
+    align-items: center
+    justify-content: center
+    padding: 140px 0 140px 180px
+    &__top
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        gap: 32px
+        position: relative
+        max-width: 400px
+        &-title
+            color: $dark-blue
+            font-size: 64px
+            font-family: $font-playfair-display-regular
+            position: relative
+            padding-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 150px
+                height: 3px
+                background-color: $coral-red
+        &-subtitle
+            color: $grey
+            font-size: 18px
+            font-family: $font-rubik-regular
+        &-btn
+            color: $white
+            font-size: 18px
+            font-family: $font-rubik-regular
+            border-radius: 12px
+            padding: 20px 40px
+            background-color: $coral-red
+            border: 0
+            transform: all .3s ease-in-out
+            cursor: pointer
+            position: relative
+            margin-left: 40px
+            &:hover
+                transform: scale(1.1)
+            &::after
+                content: ""
+                position: absolute
+                z-index: -1
+                background: url(../img/plans/grey-rect.png) no-repeat 50% 0/contain
+                width: 43px
+                height: 43px
+                right: -15px
+                top: 35px
+            &::before
+                content: ""
+                position: absolute
+                z-index: -1
+                background: url(../img/plans/blue-rect.png) no-repeat 50% 0/contain
+                width: 43px
+                height: 43px
+                left: -15px
+                top: -20px
+    &__slider
+        display: flex
+        gap: 32px
+        align-items: flex-start
+        justify-content: center
+        width: 100%
+        &-picture
+            display: block
+            background: url(../img/plans/slider/rome.png) no-repeat 50% 0/cover
+            width: 300px
+            height: 400px
+            border-radius: 26px 26px 0 0
+            &.paris
+                background: url(../img/plans/slider/paris.png) no-repeat 50% 0/cover
+            &.madrid
+                background: url(../img/plans/slider/madrid.png) no-repeat 50% 0/cover
+            &.budapest
+                background: url(../img/plans/slider/budapest.png) no-repeat 50% 0/cover
+        &-content
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-between
+            gap: 32px
+            padding: 20px 0
+            width: 100%
+            &-price
+                display: flex
+                justify-content: space-between
+                align-items: center
+                gap: 130px
+                p
+                    font-size: 18px
+                    font-family: $font-rubik-regular
+                    color: $dark-blue
+            &-name
+                font-size: 28px
+                font-weight: bold
+                font-family: $font-playfair-display-regular
+            &-down
+                display: flex
+                gap: 90px
+                justify-content: space-between
+                align-items: center
+            &-rating
+                display: flex
+                align-items: center
+                gap: 4px
+                &-star
+                    display: block
+                    background: url(../img/offer/star.png) no-repeat 50% 0/contain
+                    width: 24px
+                    height: 24px
+                p
+                    font-size: 18px
+                    font-family: $font-rubik-regular
+                    color: $dark-blue
