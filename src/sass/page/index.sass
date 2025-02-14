@@ -640,3 +640,362 @@ $dark-blue: #172432
                     font-size: 18px
                     font-family: $font-rubik-regular
                     color: $dark-blue
+
+.gallery
+    padding: 140px 180px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    gap: 100px
+    width: 100%
+    &__top
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        gap: 32px
+        position: relative
+        &-left
+            content: ""
+            position: absolute
+            bottom: 0
+            right: 280px
+            background: url(../img/distanation/move.png) no-repeat 50% 0/contain
+            width: 60px
+            height: 66px
+            cursor: pointer
+            transform: background .3s ease-in-out
+            &:hover
+                background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+                cursor: pointer
+                transform: scale(-1,1)
+        &-right
+            content: ""
+            position: absolute
+            bottom: 0
+            right: 200px
+            background: url(../img/distanation/move-right.png) no-repeat 50% 0/contain
+            width: 60px
+            height: 66px
+            cursor: pointer
+            transform: background .3s ease-in-out
+            &:hover
+                background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+                cursor: pointer
+        &-title
+            color: $dark-blue
+            font-size: 64px
+            font-family: $font-playfair-display-regular
+            position: relative
+            padding-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 280px
+                height: 3px
+                background-color: $coral-red
+        &-subtitle
+            color: $grey
+            font-size: 24px
+            font-family: $font-rubik-regular
+    &__slider
+        display: flex
+        gap: 32px
+        align-items: center
+        justify-content: space-between
+        padding: 38px 0
+        &-item:nth-child(1)
+            display: block
+            background: url(../img/gallery/item-1.png) no-repeat 50% 0/cover
+            width: 365px
+            height: 570px
+            border-radius: 26px
+            transition: transform 0.3s ease-in-out
+            cursor: pointer
+            &:hover
+                transform: translateY(-38px)
+        &-item:nth-child(2)
+            display: block
+            background: url(../img/gallery/item-2.png) no-repeat 50% 0/cover
+            width: 365px
+            height: 570px
+            border-radius: 26px
+            transition: transform 0.3s ease-in-out
+            cursor: pointer
+            &:hover
+                transform: translateY(-38px)
+        &-item:nth-child(3)
+            display: block
+            background: url(../img/gallery/item-3.png) no-repeat 50% 0/cover
+            width: 365px
+            height: 570px
+            border-radius: 26px
+            transition: transform 0.3s ease-in-out
+            cursor: pointer
+            &:hover
+                transform: translateY(-38px)
+        &-item:nth-child(4)
+            display: block
+            background: url(../img/gallery/item-4.png) no-repeat 50% 0/cover
+            width: 365px
+            height: 570px
+            border-radius: 26px
+            transition: transform 0.3s ease-in-out
+            cursor: pointer
+            &:hover
+                transform: translateY(-38px)
+
+.reviews
+    padding: 140px 0 140px 180px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    gap: 160px
+    width: 100%
+    position: relative
+    &__left
+        content: ""
+        position: absolute
+        bottom: 235px
+        right: 280px
+        background: url(../img/distanation/move.png) no-repeat 50% 0/contain
+        width: 60px
+        height: 66px
+        cursor: pointer
+        transform: background .3s ease-in-out
+        &:hover
+            background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+            cursor: pointer
+            transform: scale(-1,1)
+    &__right
+        content: ""
+        position: absolute
+        bottom: 235px
+        right: 200px
+        background: url(../img/distanation/move-right.png) no-repeat 50% 0/contain
+        width: 60px
+        height: 66px
+        cursor: pointer
+        transform: background .3s ease-in-out
+        &:hover
+            background: url(../img/distanation/move-hover.png) no-repeat 50% 0/contain
+            cursor: pointer
+    &__top
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        gap: 32px
+        position: relative
+        &-title
+            color: $dark-blue
+            font-size: 64px
+            font-family: $font-playfair-display-regular
+            position: relative
+            padding-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 280px
+                height: 3px
+                background-color: $coral-red
+        &-subtitle
+            color: $grey
+            font-size: 24px
+            font-family: $font-rubik-regular
+    &__content
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 32px
+        width: 100%
+        &-client
+            display: flex
+            flex-direction: column
+            gap: 32px
+            align-items: flex-start
+            justify-content: space-between
+            max-width: 665px
+            padding: 60px 40px 40px 40px
+            position: relative
+            z-index: 9
+            &-photo:nth-child(1)
+                content: ""
+                position: absolute
+                background: url(../img/reviews/john.png) no-repeat 50% 0/contain
+                width: 100px
+                height: 100px
+                top: -60px
+                left: 40px
+                z-index: 10
+                border-radius: 50%
+                &.smith
+                    background: url(../img/reviews/smith.png) no-repeat 50% 0/contain
+                &.tamara
+                    background: url(../img/reviews/tamara.png) no-repeat 50% 0/contain
+            p
+                color: $grey
+                font-size: 18px
+                font-family: $font-rubik-regular
+            &-rating
+                display: flex
+                align-items: center
+                gap: 4px
+                &-item
+                    display: block
+                    background: url(../img/offer/star.png) no-repeat 50% 0/contain
+                    width: 24px
+                    height: 24px
+            &-name
+                display: flex
+                flex-direction: column
+            h2
+                font-size: 24px
+                color: $grey
+                font-family: $font-playfair-display-regular
+            h3
+                font-size: 18px
+                color: $grey
+                font-family: $font-rubik-regular
+    &__subscribe
+        padding: 60px 80px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-radius: 26px
+        max-width: 1265px
+        z-index: 3
+        position: relative
+        background-color: $white
+        box-shadow: 0 0 4px rgba(0, 0, 0, 30)
+        margin-bottom: -150px
+        transform: translate(10%, 50%)
+        margin-top: 100px
+        &-content
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 100px
+            p
+                color: $grey
+                font-size: 64px
+                font-family: $font-playfair-display-regular
+            &-input
+                display: flex
+                align-items: center
+                justify-content: space-between
+                gap: 32px
+                &-wrap
+                    display: flex
+                    flex-direction: column
+                    gap: 16px
+                    justify-content: space-between
+                    align-items: flex-start
+                label
+                    color: $grey
+                    font-size: 20px
+                    font-family: $font-rubik-regular
+                input
+                    border: 0
+                    padding: 24px 40px
+                    background-color: #FFE8D4
+                    border-radius: 12px
+                    max-width: 375px
+                    width: 370px
+                    &::placeholder
+                        color: $coral-red
+                        font-size: 20px
+                        font-family: $font-rubik-regular
+                button
+                    padding: 18px 40px
+                    background-color: $coral-red
+                    color: $white
+                    font-family: $font-rubik-regular
+                    font-size: 20px
+                    border: 0
+                    border-radius: 12px
+                    cursor: pointer
+                    width: 165px
+                    align-self: flex-end
+
+.footer
+    padding: 240px 182px 140px 182px
+    background-color: $dark-blue
+    z-index: 2
+    position: relative
+    &__container
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        gap: 160px
+        align-items: flex-start
+        max-width: 1560px
+        &-rows
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+            gap: 13px
+            &-logo
+                content: ""
+                background: url(../img/footer/logo.png) no-repeat 50% 0/contain
+                max-width: 235px
+                width: 230px
+                height: 45px
+                align-self: flex-start
+            &-rights
+                color: $white
+                font-size: 14px
+                font-family: $font-rubik-regular
+                width: 303px
+            &-title
+                color: $white
+                font-size: 24px
+                font-family: $font-rubik-regular
+                font-weight: medium
+                margin-bottom: 3px
+                white-space: nowrap
+            &-wrap
+                display: flex
+                flex-direction: column
+                gap: 13px
+                align-items: flex-start
+                max-width: 175px
+                cursor: pointer
+                &.networks
+                    display: flex
+                    flex-direction: row
+                    gap: 24px
+                &-item
+                    align-self: flex-start
+                    color: $white
+                    font-size: 18px
+                    font-family: $font-rubik-regular
+                    &.facebook
+                        content: ""
+                        background: url(../img/footer/facebook.png) no-repeat 50% 0/contain
+                        width: 32px
+                        height: 32px
+                        cursor: pointer
+                    &.pinterest
+                        content: ""
+                        background: url(../img/footer/pinterest.png) no-repeat 50% 0/contain
+                        width: 32px
+                        height: 32px
+                        cursor: pointer
+                    &.insta
+                        content: ""
+                        background: url(../img/footer/insta.png) no-repeat 50% 0/contain
+                        width: 32px
+                        height: 32px
+                        cursor: pointer
+                    &.twitter
+                        content: ""
+                        background: url(../img/footer/twitter.png) no-repeat 50% 0/contain
+                        width: 32px
+                        height: 32px
+                        cursor: pointer
