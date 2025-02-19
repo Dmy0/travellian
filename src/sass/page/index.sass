@@ -239,11 +239,14 @@ $dark-blue: #172432
         display: flex
         gap: 32px
         align-items: center
-        justify-content: center
-        overflow-x: auto
-        width: 100%
-        height: 670px
+        justify-content: flex-start
+        min-width: 1800px
+        scroll-snap-type: x mandatory
+        min-height: 670px
+        transition: transform 0.5s ease-in-out
+        width: max-content
         &-item:nth-child(1)
+            flex-shrink: 0
             background: url("../img/distanation/slider/berlin.png") no-repeat 50% 0/cover
             width: 500px
             height: 670px
@@ -268,6 +271,7 @@ $dark-blue: #172432
                     width: 24px
                     height: 24px
         &-item:nth-child(2)
+            flex-shrink: 0
             background: url("../img/distanation/slider/london.png") no-repeat 50% 0/cover
             width: 500px
             height: 670px
@@ -292,6 +296,7 @@ $dark-blue: #172432
                     width: 24px
                     height: 24px
         &-item:nth-child(3)
+            flex-shrink: 0
             background: url("../img/distanation/slider/venice.png") no-repeat 50% 0/cover
             width: 500px
             height: 670px
@@ -316,6 +321,58 @@ $dark-blue: #172432
                     width: 24px
                     height: 24px
         &-item:nth-child(4)
+            flex-shrink: 0
+            background: url("../img/distanation/slider/lisbon.png") no-repeat 50% 0/cover
+            width: 500px
+            height: 670px
+            position: relative
+            border-radius: 26px
+            p:nth-child(1)
+                margin: 539px 0 0 24px
+                color: $white
+                font-size: 28px
+                font-family: $font-playfair-display-regular
+            p:nth-child(2)
+                margin: 17px 0 40px 50px
+                color: $white
+                font-family: $font-rubik-regular
+                font-size: 24px
+                &::before
+                    content: ""
+                    position: absolute
+                    background: url("../img/distanation/slider/location-icon.png") no-repeat 50% 0/contain
+                    left: 24px
+                    bottom: 53px
+                    width: 24px
+                    height: 24px
+        &-item:nth-child(5)
+            flex-shrink: 0
+            background: url("../img/distanation/slider/lisbon.png") no-repeat 50% 0/cover
+            width: 500px
+            height: 670px
+            position: relative
+            border-radius: 26px
+            p:nth-child(1)
+                margin: 539px 0 0 24px
+                color: $white
+                font-size: 28px
+                font-family: $font-playfair-display-regular
+            p:nth-child(2)
+                margin: 17px 0 40px 50px
+                color: $white
+                font-family: $font-rubik-regular
+                font-size: 24px
+                &::before
+                    content: ""
+                    position: absolute
+                    background: url("../img/distanation/slider/location-icon.png") no-repeat 50% 0/contain
+                    left: 24px
+                    bottom: 53px
+                    width: 24px
+                    height: 24px
+        &-item:nth-child(6)
+            flex-shrink: 0
+            padding-bottom: 10px
             background: url("../img/distanation/slider/lisbon.png") no-repeat 50% 0/cover
             width: 500px
             height: 670px
@@ -355,33 +412,6 @@ $dark-blue: #172432
         gap: 32px
         position: relative
         width: 100%
-        &-left
-            content: ""
-            position: absolute
-            bottom: -10px
-            left: 100px
-            background: url("../img/distanation/move.png") no-repeat 50% 0/contain
-            width: 60px
-            height: 66px
-            cursor: pointer
-            transform: background .3s ease-in-out
-            &:hover
-                background: url("../img/distanation/move-hover.png") no-repeat 50% 0/contain
-                cursor: pointer
-                transform: scale(-1,1)
-        &-right
-            content: ""
-            position: absolute
-            bottom: -10px
-            left: 170px
-            background: url("../img/distanation/move-right.png") no-repeat 50% 0/contain
-            width: 60px
-            height: 66px
-            cursor: pointer
-            transform: background .3s ease-in-out
-            &:hover
-                background: url("../img/distanation/move-hover.png") no-repeat 50% 0/contain
-                cursor: pointer
         &-title
             color: $dark-blue
             font-size: 64px
@@ -612,7 +642,17 @@ $dark-blue: #172432
         gap: 32px
         align-items: flex-start
         justify-content: center
-        width: 100%
+        width: 1240px
+        overflow: auto
+        padding: 20px 0 0 75px
+        &::-webkit-scrollbar
+            background: $white
+            border-radius: 5px
+        &::-webkit-scrollbar-thumb
+            background: $coral-red
+            border-radius: 5px
+        &::-webkit-scrollbar-thumb:hover
+            background: $mahogany-brown
         &-picture
             display: block
             background: url("../img/plans/slider/rome.png") no-repeat 50% 0/cover
