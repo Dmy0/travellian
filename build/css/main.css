@@ -1490,21 +1490,18 @@ ul, li, p, h1, h2, h3 {
   justify-content: space-between;
   gap: 32px;
 }
-.reviews__subscribe-content-input-wrap {
+.reviews__subscribe-content-input form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 16px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
 }
 .reviews__subscribe-content-input label {
   color: #767E86;
@@ -1518,6 +1515,7 @@ ul, li, p, h1, h2, h3 {
   border-radius: 12px;
   max-width: 375px;
   width: 370px;
+  margin-top: 7px;
 }
 .reviews__subscribe-content-input input::-webkit-input-placeholder {
   color: #FF7757;
@@ -1543,6 +1541,9 @@ ul, li, p, h1, h2, h3 {
   color: #FF7757;
   font-size: 20px;
   font-family: Rubik-Regular, sans-serif;
+}
+.reviews__subscribe-content-input span {
+  font-size: 14px;
 }
 .reviews__subscribe-content-input button {
   padding: 18px 40px;

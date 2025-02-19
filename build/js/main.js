@@ -36,3 +36,17 @@ moveRight.addEventListener("click", () =>{
     currentItem < slidesQuantity - 1 ? (currentItem++, updateSlider()) : currentItem
 })
 updateSlider();
+
+function validateEmail() {
+    const emailInput = document.getElementById("email").value;
+    const errorMessage = document.getElementById("error-message");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(emailInput)) {
+      errorMessage.style.display = "block";
+      return false;
+    } else {
+      errorMessage.style.display = "none";
+      return true;
+    }
+  }
