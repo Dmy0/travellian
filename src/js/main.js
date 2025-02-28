@@ -29,11 +29,21 @@ function updateSlider() {
 }
 
 moveLeft.addEventListener("click", ()=>{
-    currentItem > 0 ? (currentItem--, updateSlider()) : currentItem
+    if (currentItem > 0) {
+        updateSlider(--currentItem);
+    } else {
+        currentItem = slidesQuantity -3
+        updateSlider(currentItem)
+    }
 })
 
 moveRight.addEventListener("click", () =>{
-    currentItem < slidesQuantity - 1 ? (currentItem++, updateSlider()) : currentItem
+    if (currentItem < slidesQuantity -3) {
+        updateSlider(++currentItem);
+    } else {
+        currentItem = 0;
+        updateSlider(currentItem);
+    }
 })
 updateSlider();
 
@@ -50,3 +60,39 @@ function validateEmail() {
       return true;
     }
   }
+
+  const popupOpenLog = document.querySelector(".header__buttons-login"),
+  popupLog = document.querySelector(".login"),
+  popupOpenSign = document.querySelector(".header__buttons-signup"),
+  popupSign = document.querySelector(".sign"),
+  overlay = document.querySelector(".overlay"),
+  popupCloseBtns = document.querySelectorAll(".close");
+
+function toggleClass(btn, popup) {
+btn.addEventListener("click", function (e) {
+    popup.classList.toggle("hide");
+    overlay.classList.toggle("opacity");
+});
+}
+
+toggleClass(popupOpenLog, popupLog);
+toggleClass(popupOpenSign, popupSign);
+
+popupCloseBtns.forEach(btn => {
+btn.addEventListener("click", function (e) {
+    popupLog.classList.add("hide");
+    popupSign.classList.add("hide");
+    overlay.classList.remove("opacity");
+});
+});
+
+document.addEventListener("click", function (e) {
+if (!popupLog.contains(e.target) && !popupOpenLog.contains(e.target) && !popupLog.classList.contains("hide")) {
+    popupLog.classList.add("hide");
+    overlay.classList.remove("opacity");
+}
+if (!popupSign.contains(e.target) && !popupOpenSign.contains(e.target) && !popupSign.classList.contains("hide")) {
+    popupSign.classList.add("hide");
+    overlay.classList.remove("opacity");
+}
+});

@@ -12,6 +12,220 @@ $mahogany-brown: #61291C
 $grey: #767E86
 $dark-blue: #172432
 
+.overlay
+    display: block
+    position: fixed
+    height: 100%
+    width: 100%
+    backdrop-filter: blur(10px)
+    top: 0
+    left: 0
+    opacity: 0
+    z-index: 100
+    pointer-events: none
+    transition: opacity 0.5s ease-in-out
+
+.opacity
+    opacity: 1
+
+.hide
+    display: none !important
+
+.login
+    padding: 48px 72px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    z-index: 102
+    &__form
+        display: flex
+        flex-direction: column
+        gap: 32px
+        background-color: $white
+        max-width: 540px
+        border-radius: 15px
+        border: 0
+        box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25)
+        padding: 48px 72px
+        z-index: 101
+        position: relative
+        pointer-events: auto
+        .close
+            content: ""
+            position: absolute
+            background: url(../img/popups/close.png) no-repeat 50% 0/contain
+            width: 32px
+            cursor: pointer
+            height: 32px
+            right: 10px
+            top: 15px
+            z-index: 1
+        h1
+            font-size: 28px
+            font-family: $font-rubik-regular
+            color: $dark-blue
+        &-inputs
+            display: flex
+            flex-direction: column
+            gap: 24px
+            &-item
+                display: flex
+                flex-direction: column
+                gap: 12px
+                label
+                    font-size: 16px
+                    font-family: $font-rubik-regular
+                input
+                    padding: 17px 45px
+                    border: 1px solid $coral-red
+                    border-radius: 12px
+        &-button
+            font-size: 20px
+            color: $white
+            background-color: $coral-red
+            font-family: $font-rubik-regular
+            padding: 12px 32px
+            border: 0
+            border-radius: 12px
+            transition: background-color .3s ease-in-out
+            &:hover
+                background-color: inherit
+                color: $coral-red
+        p
+            font-size: 20px
+            font-family: $font-rubik-italic
+        a
+            text-decoration: underline
+            color: $mahogany-brown
+            margin-left: 10px
+
+.sign
+    padding: 48px 72px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 32px
+        background-color: $white
+        max-width: 540px
+        border-radius: 15px
+        border: 0
+        box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25)
+        padding: 48px 72px
+        z-index: 101
+        position: relative
+        pointer-events: auto
+        h1
+            font-size: 28px
+            font-family: $font-rubik-regular
+        h2
+            font-size: 20px
+            font-family: $font-rubik-regular
+            font-weight: bold
+            color: #98A2B3
+        .close
+            content: ""
+            position: absolute
+            background: url(../img/popups/close.png) no-repeat 50% 0/contain
+            width: 32px
+            height: 32px
+            right: 10px
+            top: 15px
+        &-btn
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 16px
+            .google
+                padding: 16px 16px 16px 30px
+                gap: 8px
+                background-color: $coral-red
+                border: 0
+                border-radius: 12px
+                color: $peach-pink
+                font-size: 16px
+                font-family: $font-rubik-regular
+                cursor: pointer
+                position: relative
+                max-width: 190px
+                width: 180px
+                transition: background-color .3s ease-in-out
+                &:hover
+                    background-color: inherit
+                    color: $coral-red
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 45px
+                    background: url(../img/popups/google-icon.png) no-repeat 50% 0/contain
+                    width: 20px
+                    height: 20px
+            .facebook
+                padding: 16px 16px 16px 30px
+                gap: 8px
+                background-color: $coral-red
+                border: 0
+                border-radius: 12px
+                color: $peach-pink
+                font-size: 16px
+                font-family: $font-rubik-regular
+                cursor: pointer
+                position: relative
+                max-width: 190px
+                width: 180px
+                transition: background-color .3s ease-in-out
+                &:hover
+                    background-color: inherit
+                    color: $coral-red
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 35px
+                    background: url(../img/popups/facebook-icon.png) no-repeat 50% 0/contain
+                    width: 20px
+                    height: 20px
+        &-inputs
+            display: flex
+            flex-direction: column
+            gap: 24px
+            width: 100%
+            &-item
+                display: flex
+                flex-direction: column
+                gap: 12px
+                label
+                    font-size: 16px
+                    font-family: $font-rubik-regular
+                input
+                    padding: 17px 45px
+                    border: 1px solid $coral-red
+                    border-radius: 12px
+        &-button
+            font-size: 20px
+            color: $white
+            background-color: $coral-red
+            font-family: $font-rubik-regular
+            padding: 12px 32px
+            border: 0
+            border-radius: 12px
+            transition: background-color .3s ease-in-out
+            width: 100%
+            &:hover
+                background-color: inherit
+                color: $coral-red
+        p
+            font-size: 20px
+            font-family: $font-rubik-italic
+        a
+            text-decoration: underline
+            color: $mahogany-brown
+            margin-left: 10px
+
 .slider
     position: relative
     width: 100%
@@ -45,7 +259,7 @@ $dark-blue: #172432
     padding: 50px 180px
     position: absolute
     top: 0
-    z-index: 10
+    z-index: 50
     &__logo
         content: ""
         background: url("../img/header/header-logo.png") no-repeat 50% 0/contain
@@ -88,7 +302,9 @@ $dark-blue: #172432
             padding: 20px 32px
             border: 0
             border-radius: 12px
+            cursor: pointer
             transition: background-color .3s ease-in-out
+            z-index: 30
             &:hover
                 background-color: $coral-red
         &-signup
@@ -101,6 +317,8 @@ $dark-blue: #172432
             border-radius: 12px
             transition: background-color .3s ease-in-out
             white-space: nowrap
+            cursor: pointer
+            z-index: 30
             &:hover
                 background-color: inherit
 
