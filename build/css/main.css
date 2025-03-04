@@ -48,6 +48,143 @@ ul, li, p, h1, h2, h3 {
   font-weight: normal;
   font-style: italic;
 }
+.calendar {
+  position: absolute;
+  height: 320px;
+  width: 310px;
+  border-radius: 0 25px 25px 25px;
+  background: #ffffff;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(118, 126, 134, 0.1);
+  -webkit-box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 100;
+  top: 70px;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, visability 0s 0.3s;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, visability 0s 0.3s;
+}
+.calendar.open {
+  opacity: 1;
+  visibility: visible;
+  max-height: 320px;
+  -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.calendar__month {
+  color: #331811;
+}
+.calendar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 15px 25px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Rubik-Regular, sans-serif;
+}
+.calendar__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.calendar__prev {
+  content: "";
+  border: 0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 30px;
+  background: url(../img/calendar/arrow.png) no-repeat 50% 0/contain;
+  cursor: pointer;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.calendar__prev:hover {
+  opacity: 0.5;
+}
+.calendar__next {
+  content: "";
+  border: 0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 15px;
+  background: url(../img/calendar/arrow.png) no-repeat 50% 0/contain;
+  -webkit-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+  cursor: pointer;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.calendar__next:hover {
+  opacity: 0.5;
+}
+.calendar__day-names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 3px;
+  padding: 5px;
+  font-size: 16px;
+}
+.calendar__day-names span {
+  color: #331811;
+}
+.calendar__days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.calendar__days span:not(.calendar__days-hidden) {
+  cursor: pointer;
+  width: 44px;
+  height: 40px;
+  color: #331811;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+.calendar__days span.today {
+  background-color: #61291C;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 50%;
+}
+.calendar__days span.calendar__days-hidden {
+  visibility: hidden;
+}
+
 .overlay {
   display: block;
   position: fixed;
@@ -561,6 +698,7 @@ ul, li, p, h1, h2, h3 {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 12px;
+  position: relative;
 }
 .booking__bottom-field label {
   color: #767E86;
@@ -575,6 +713,18 @@ ul, li, p, h1, h2, h3 {
   color: #172432;
   font-size: 20px;
   font-family: PlayfairDisplay-Regular, sans-serif;
+  position: relative;
+  z-index: 11;
+}
+.booking__bottom-field input::after {
+  content: "";
+  position: absolute;
+  background: url(../img/slider/choose-arrow.png) no-repeat 50% 0/contain;
+  width: 12px;
+  height: 6px;
+  top: 10px;
+  right: 0;
+  cursor: pointer;
 }
 .booking__bottom-btn {
   border: 0;

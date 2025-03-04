@@ -96,3 +96,89 @@ if (!popupSign.contains(e.target) && !popupOpenSign.contains(e.target) && !popup
     overlay.classList.remove("opacity");
 }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const checkinInput = document.getElementById('checkin');
+    const calendar = document.querySelector('.calendar');
+    const prevBtn = document.querySelector('.calendar__prev');
+    const nextBtn = document.querySelector('.calendar__next');
+    const monthYearEl = document.getElementById('month-year');
+    const daysContainer = document.getElementById('calendar-days');
+    const dayNamesContainer = document.querySelector('.calendar__day-names');
+  
+    const monthNames = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+  
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  
+    let currentDate = new Date();
+  
+    const renderDayNames = () => {
+      dayNamesContainer.innerHTML = dayNames.map(day => `<span>${day}</span>`).join('');
+    };
+  
+    const renderCalendar = () => {
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      monthYearEl.textContent = `${monthNames[month]} ${year}`;
+  
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+  
+      daysContainer.innerHTML = '';
+  
+      for (let i = 0; i < firstDay; i++) {
+        const emptySpan = document.createElement('span');
+        emptySpan.classList.add('calendar__days-hidden');
+        daysContainer.appendChild(emptySpan);
+      }
+  
+      for (let day = 1; day <= daysInMonth; day++) {
+        const daySpan = document.createElement('span');
+        daySpan.textContent = day;
+  
+      
+        if (
+          day === new Date().getDate() &&
+          month === new Date().getMonth() &&
+          year === new Date().getFullYear()
+        ) {
+          daySpan.classList.add('today');
+        }
+  
+        
+        daySpan.addEventListener('click', () => {
+        
+          checkinInput.value = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+          
+          calendar.classList.remove('open');
+        });
+  
+        daysContainer.appendChild(daySpan);
+      }
+    };
+  
+    const changeMonth = (delta) => {
+      currentDate.setMonth(currentDate.getMonth() + delta);
+      renderCalendar();
+    };
+  
+    prevBtn.addEventListener('click', () => changeMonth(-1));
+    nextBtn.addEventListener('click', () => changeMonth(1));
+  
+    checkinInput.addEventListener('click', () => {
+      calendar.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!calendar.contains(e.target) && e.target !== checkinInput) {
+          calendar.classList.remove('open');
+        }
+      });
+  
+
+    renderDayNames();
+    renderCalendar();
+  });

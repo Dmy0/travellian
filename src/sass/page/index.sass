@@ -12,6 +12,97 @@ $mahogany-brown: #61291C
 $grey: #767E86
 $dark-blue: #172432
 
+.calendar
+    position: absolute
+    height: 320px
+    width: 310px
+    border-radius: 0 25px 25px 25px
+    background: $white
+    backdrop-filter: blur(10px)
+    border: 2px solid rgba(118, 126, 134, 0.1)
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2)
+    overflow: hidden
+    z-index: 100
+    top: 70px
+    opacity: 0
+    visibility: hidden
+    max-height: 0
+    transition: max-height .3s ease-in-out, opacity .3s ease-in-out,visability 0s .3s
+    &.open
+        opacity: 1
+        visibility: visible
+        max-height: 320px
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out
+    &__month
+        color: $deep-coffee
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px 15px 25px
+        color: $white
+        font-weight: bold
+        font-family: $font-rubik-regular
+    &__btns
+        display: flex
+        gap: 15px
+    &__prev
+        content: ""
+        border: 0
+        width: 16px
+        height: 16px
+        position: absolute
+        right: 30px
+        background: url(../img/calendar/arrow.png) no-repeat 50% 0/contain
+        cursor: pointer
+        transition: opacity .1s ease-in-out
+        &:hover
+            opacity: 0.5
+    &__next
+        content: ""
+        border: 0
+        width: 16px
+        height: 16px
+        position: absolute
+        right: 15px
+        background: url(../img/calendar/arrow.png) no-repeat 50% 0/contain
+        transform: scale(-1, -1)
+        cursor: pointer
+        transition: opacity .1s ease-in-out
+        &:hover
+            opacity: 0.5
+    &__day
+        &-names
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 3px
+            padding: 5px
+            font-size: 16px
+            span
+                color: $deep-coffee
+    &__days
+        display: flex
+        flex-wrap: wrap
+        span:not(.calendar__days-hidden)
+            cursor: pointer
+            width: 44px
+            height: 40px
+            color: $deep-coffee
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 16px
+            border-radius: 50%
+            transition: background-color .1s
+        span.today
+            background-color: $mahogany-brown
+            color: $white
+            font-weight: bold
+            border-radius: 50%
+        span.calendar__days-hidden
+            visibility: hidden
+
 .overlay
     display: block
     position: fixed
@@ -359,6 +450,7 @@ $dark-blue: #172432
         display: flex
         flex-direction: column
         gap: 12px
+        position: relative
         label
             color: $grey
             font-family: $font-rubik-regular
@@ -371,6 +463,17 @@ $dark-blue: #172432
             color: $dark-blue
             font-size: 20px
             font-family: $font-playfair-display-regular
+            position: relative
+            z-index: 11
+            &::after
+                content: ""
+                position: absolute
+                background: url(../img/slider/choose-arrow.png) no-repeat 50% 0/contain
+                width: 12px
+                height: 6px
+                top: 10px
+                right: 0
+                cursor: pointer
     &-btn
         border: 0
         background-color: $coral-red
