@@ -95,12 +95,12 @@
           <label for="person">PERSON</label>
           <input id="person" value="1"></input>
         </div>
-        <div class="booking__bottom-field">
+        <div class="booking__bottom-field" id="checkin">
           <label for="checkin">CHECK IN</label>
-          <input type="date" id="checkin" value="2020-10-17" readonly>
+          <input type="date" value="2020-10-17" readonly>
           <div class="calendar">
             <div class="calendar__header">
-              <div class="calendar__month" id="month-year"></div>
+              <div class="calendar__month month-year"></div>
               <div class="calendar__btns">
                 <button type="button" class="calendar__prev"></button>
                 <button type="button" class="calendar__next"></button>
@@ -110,13 +110,28 @@
               <div class="calendar__day-names">
                 
               </div>
-              <div class="calendar__days" id="calendar-days"></div>
+              <div class="calendar__days calendar-days"></div>
             </div>
           </div>
         </div>
-        <div class="booking__bottom-field">
+        <div class="booking__bottom-field" id="checkout">
           <label for="checkout">CHECK OUT</label>
-          <input type="date" id="checkout" value="2020-10-17" readonly>
+          <input type="date" value="2020-10-17" readonly>
+          <div class="calendar">
+            <div class="calendar__header">
+              <div class="calendar__month month-year"></div>
+              <div class="calendar__btns">
+                <button type="button" class="calendar__prev"></button>
+                <button type="button" class="calendar__next"></button>
+              </div>
+            </div>
+            <div class="calendar__body">
+              <div class="calendar__day-names">
+                
+              </div>
+              <div class="calendar__days calendar-days"></div>
+            </div>
+          </div>
         </div>
         <button class="booking__bottom-btn"><p>Book Now</p></button>
       </div>

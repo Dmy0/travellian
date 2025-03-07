@@ -98,87 +98,130 @@ if (!popupSign.contains(e.target) && !popupOpenSign.contains(e.target) && !popup
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const checkinInput = document.getElementById('checkin');
-    const calendar = document.querySelector('.calendar');
-    const prevBtn = document.querySelector('.calendar__prev');
-    const nextBtn = document.querySelector('.calendar__next');
-    const monthYearEl = document.getElementById('month-year');
-    const daysContainer = document.getElementById('calendar-days');
-    const dayNamesContainer = document.querySelector('.calendar__day-names');
-  
-    const monthNames = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-    ];
-  
-    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  
-    let currentDate = new Date();
-  
-    const renderDayNames = () => {
-      dayNamesContainer.innerHTML = dayNames.map(day => `<span>${day}</span>`).join('');
-    };
-  
-    const renderCalendar = () => {
-      const year = currentDate.getFullYear();
-      const month = currentDate.getMonth();
-      monthYearEl.textContent = `${monthNames[month]} ${year}`;
-  
-      const firstDay = new Date(year, month, 1).getDay();
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-  
-      daysContainer.innerHTML = '';
-  
-      for (let i = 0; i < firstDay; i++) {
-        const emptySpan = document.createElement('span');
-        emptySpan.classList.add('calendar__days-hidden');
-        daysContainer.appendChild(emptySpan);
-      }
-  
-      for (let day = 1; day <= daysInMonth; day++) {
-        const daySpan = document.createElement('span');
-        daySpan.textContent = day;
-  
-      
-        if (
-          day === new Date().getDate() &&
-          month === new Date().getMonth() &&
-          year === new Date().getFullYear()
-        ) {
-          daySpan.classList.add('today');
-        }
-  
-        
-        daySpan.addEventListener('click', () => {
-        
-          checkinInput.value = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-          
-          calendar.classList.remove('open');
-        });
-  
-        daysContainer.appendChild(daySpan);
-      }
-    };
-  
-    const changeMonth = (delta) => {
-      currentDate.setMonth(currentDate.getMonth() + delta);
-      renderCalendar();
-    };
-  
-    prevBtn.addEventListener('click', () => changeMonth(-1));
-    nextBtn.addEventListener('click', () => changeMonth(1));
-  
-    checkinInput.addEventListener('click', () => {
-      calendar.classList.toggle('open');
+  const checkinInput = document.getElementById('checkin');
+  const checkoutInput = document.getElementById('checkout');
+  const prevBtn = document.querySelector('.calendar__prev');
+  const nextBtn = document.querySelector('.calendar__next');
+  const monthYearEl = document.querySelectorAll('.month-year');
+  const daysContainer = document.querySelectorAll('.calendar-days');
+  const dayNamesContainer = document.querySelectorAll('.calendar__day-names');
+
+  const monthNames = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  ];
+
+  const dayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+  let currentDate = new Date();
+
+  const renderDayNames = (dayNamesContainer) => {
+    dayNamesContainer.innerHTML = dayNames.map(day => `<span>${day}</span>`).join('');
+  };
+
+  const renderCalendar = (monthYearEl, daysContainer) => {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+
+    monthYearEl.forEach(elem => {
+        elem.textContent = `${monthNames[month]} ${year}`;
     });
 
-    document.addEventListener('click', (e) => {
-        if (!calendar.contains(e.target) && e.target !== checkinInput) {
-          calendar.classList.remove('open');
-        }
-      });
-  
+    const firstDay = new Date(year, month, 0).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    renderDayNames();
-    renderCalendar();
+    daysContainer.forEach(elem => {
+        elem.innerHTML = ''; 
+
+        for (let i = 0; i < firstDay; i++) {
+            const emptySpan = document.createElement('span');
+            emptySpan.classList.add('calendar__days-hidden');
+            elem.appendChild(emptySpan);
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const daySpan = document.createElement('span'); 
+            daySpan.textContent = day;
+
+            if (
+                day === new Date().getDate() &&
+                month === new Date().getMonth() &&
+                year === new Date().getFullYear()
+            ) {
+                daySpan.classList.add('today');
+            }
+
+            daySpan.addEventListener("click", (e) => {
+                e.stopPropagation(); 
+                checkinInput.value = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+                const calendar = elem.closest('.calendar');
+                if (calendar) calendar.classList.remove('open');
+            });
+
+            elem.appendChild(daySpan);
+        }
+    });
+  };
+
+  const changeMonth = (delta, monthYearEl, daysContainer) => {
+    currentDate.setMonth(currentDate.getMonth() + delta);
+    renderCalendar(monthYearEl, daysContainer);
+  };
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    changeMonth(-1, monthYearEl, daysContainer);
   });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    changeMonth(1, monthYearEl, daysContainer);
+  });
+
+  checkinInput.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    let calendar = checkinInput.querySelector(".calendar");
+    if (calendar) {
+      
+      calendar.classList.toggle("open");
+     
+      let otherCalendar = checkoutInput.querySelector(".calendar");
+      if (otherCalendar && otherCalendar.classList.contains('open')) {
+        otherCalendar.classList.remove('open');
+      }
+    }
+  });
+
+  checkoutInput.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    let calendar = checkoutInput.querySelector(".calendar");
+    if (calendar) {
+      
+      calendar.classList.toggle("open");
+      
+      let otherCalendar = checkinInput.querySelector(".calendar");
+      if (otherCalendar && otherCalendar.classList.contains('open')) {
+        otherCalendar.classList.remove('open');
+      }
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    let calendars = document.querySelectorAll(".calendar.open");
+    calendars.forEach(calendar => {
+      if (!calendar.contains(e.target) && !checkinInput.contains(e.target) && !checkoutInput.contains(e.target)) {
+        calendar.classList.remove('open');
+      }
+    });
+  });
+
+  dayNamesContainer.forEach(day => {
+    renderDayNames(day);
+  })
+  
+  renderCalendar(monthYearEl, daysContainer);
+});
+
+
+
